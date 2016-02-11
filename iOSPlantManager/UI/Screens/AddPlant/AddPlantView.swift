@@ -72,11 +72,13 @@ class AddPlantView: UIView {
     }(UILabel())
     
     let timePicker: UIDatePicker = {
+        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.datePickerMode = .countDownTimer
         return $0
     }(UIDatePicker())
     
     let addButton: ButtonPrimary = {
+        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.configure(with: .init(text: "Cadastrar Planta"))
         return $0
     }(ButtonPrimary())

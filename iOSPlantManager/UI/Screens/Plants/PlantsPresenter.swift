@@ -32,11 +32,11 @@ class PlantsPrensenter {
 
 extension PlantsPrensenter: PlantsPresenterProtocol {
     func fetchEnvironmentsData() {
-        
+        // TODO: buscar ambientes
     }
     
     func fetchPlants() {
-        
+        // TODO: buscar plantas
     }
     
     func userModel() -> User {

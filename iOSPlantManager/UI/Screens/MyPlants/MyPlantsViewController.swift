@@ -23,6 +23,7 @@ class MyPlantsViewController: BaseViewController<MyPlantsView> {
     }
 }
 
+// MARK: - TableView Delegates
 extension MyPlantsViewController: UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         1
@@ -60,6 +61,7 @@ extension MyPlantsViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - TableView Data source
 extension MyPlantsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        20

@@ -51,8 +51,6 @@ class UserIdentificationView: ViewWithKeyboard {
         return $0
     }(ButtonPrimary())
     
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .background

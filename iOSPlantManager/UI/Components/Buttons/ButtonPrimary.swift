@@ -14,12 +14,7 @@ struct ButtonPrimaryModel {
 class ButtonPrimary: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
-     
-        backgroundColor = .green
-        tintColor = .shape
-        layer.cornerRadius = 16
-        titleLabel?.font = .headingLargeSemiBold
-        
+        setup()
         setupLayout()
     }
     
@@ -29,6 +24,13 @@ class ButtonPrimary: UIButton {
     
     func configure(with model: ButtonPrimaryModel) {
         setTitle(model.text, for: .normal)
+    }
+    
+    func setup() {
+        backgroundColor = .green
+        tintColor = .shape
+        layer.cornerRadius = 16
+        titleLabel?.font = .headingLargeSemiBold
     }
 }
 

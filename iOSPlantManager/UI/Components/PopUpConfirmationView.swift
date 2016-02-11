@@ -9,13 +9,12 @@ import UIKit
 
 class PopUpConfirmationView: UIView {
     let container: UIView = {
-        let v = UIView()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = .background
-        v.layer.cornerRadius = 20
-        v.layer.masksToBounds = true
-        return v
-    }()
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.backgroundColor = .background
+        $0.layer.cornerRadius = 20
+        $0.layer.masksToBounds = true
+        return $0
+    }(UIView())
     
     let stack: UIStackView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -96,7 +95,7 @@ extension PopUpConfirmationView: ViewCode {
             container.centerYAnchor.constraint(equalTo: centerYAnchor),
             container.centerXAnchor.constraint(equalTo: centerXAnchor),
             container.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.7),
-            container.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.4),
+            container.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.45),
             
             stack.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 32),
             stack.topAnchor.constraint(equalTo: container.topAnchor, constant: 32),
@@ -117,17 +116,13 @@ extension PopUpConfirmationView: ViewCode {
 }
 
 
-class PopUpConfirmationViewController: UIViewController {
-    private let popUpConfirmationView = PopUpConfirmationView()
-
+class PopUpConfirmationViewController: BaseViewController<PopUpConfirmationView> {
     init(imageUrl: String, message: String) {
-        super.init(nibName: nil, bundle: nil)
-        popUpConfirmationView.imageView.loadImage(from: imageUrl)
-        popUpConfirmationView.messageLabel.text = message
-        popUpConfirmationView.deleteBtn.addTarget(self, action: #selector(onCancel), for: .touchUpInside)
-        popUpConfirmationView.cancelBtn.addTarget(self, action: #selector(onCancel), for: .touchUpInside)
-
-        view = popUpConfirmationView
+        super.init()
+        customView.imageView.loadImage(from: imageUrl)
+        customView.messageLabel.text = message
+        customView.deleteBtn.addTarget(self, action: #selector(onCancel), for: .touchUpInside)
+        customView.cancelBtn.addTarget(self, action: #selector(onCancel), for: .touchUpInside)
     }
 
     required init?(coder: NSCoder) {

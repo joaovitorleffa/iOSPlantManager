@@ -14,6 +14,8 @@ struct UserInfoViewModel {
 }
 
 class UserInfoView: UIView {
+    private let imageSize: CGFloat = 56
+    
     let containerStackView: UIStackView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .horizontal
@@ -29,9 +31,9 @@ class UserInfoView: UIView {
         return $0
     }(UILabel())
     
-    let imageView: UIImageView = {
+    lazy var imageView: UIImageView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.layer.cornerRadius = 56 / 2
+        $0.layer.cornerRadius = self.imageSize / 2
         $0.layer.masksToBounds = true
         $0.backgroundColor = .systemGray6
         $0.contentMode = .scaleAspectFit
@@ -48,7 +50,7 @@ class UserInfoView: UIView {
     }
     
     func configure(with model: UserInfoViewModel) {
-        greetingLabel.attributedText = NSAttributedString(string: model.titlePrefix).appendWeight(model.title)
+        greetingLabel.attributedText = NSAttributedString(string: model.titlePrefix).appendSufix(model.title)
         
         if model.imageUrl.isEmpty {
             imageView.image = UIImage(systemName: "person.fill")
@@ -73,8 +75,8 @@ extension UserInfoView: ViewCode {
             containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             containerStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            imageView.heightAnchor.constraint(equalToConstant: 56),
-            imageView.widthAnchor.constraint(equalToConstant: 56)
+            imageView.heightAnchor.constraint(equalToConstant: imageSize),
+            imageView.widthAnchor.constraint(equalToConstant: imageSize)
         ])
     }
 }

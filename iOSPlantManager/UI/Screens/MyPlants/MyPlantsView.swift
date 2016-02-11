@@ -10,7 +10,7 @@ import UIKit
 class MyPlantsView: UIView {
     let userInfoView: UserInfoView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.configure(with: .init(titlePrefix: "Minhas\n", title: "Plantinhas", imageUrl: ""))
+        $0.configure(with: .init(titlePrefix: "Minhas", title: "Plantinhas", imageUrl: ""))
         return $0
     }(UserInfoView())
     

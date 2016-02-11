@@ -52,30 +52,16 @@ class GreetingView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .shape
+        setup()
         setupLayout()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
-
-extension GreetingView {
-    func setupContentStackViewConstraints() {
-        NSLayoutConstraint.activate([
-            contentStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 24),
-            contentStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 42),
-            contentStackView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-            contentStackView.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
-        ])
-    }
     
-    func setupButtonConstraints() {
-        NSLayoutConstraint.activate([
-            nextButton.widthAnchor.constraint(equalToConstant: 56),
-            nextButton.heightAnchor.constraint(equalToConstant: 56)
-        ])
+    func setup() {
+        backgroundColor = .shape
     }
 }
 
@@ -89,7 +75,14 @@ extension GreetingView: ViewCode {
     }
     
     func setupConstraints() {
-        setupContentStackViewConstraints()
-        setupButtonConstraints()
+        NSLayoutConstraint.activate([
+            contentStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 24),
+            contentStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 42),
+            contentStackView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+            contentStackView.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
+            
+            nextButton.widthAnchor.constraint(equalToConstant: 56),
+            nextButton.heightAnchor.constraint(equalToConstant: 56)
+        ])
     }
 }

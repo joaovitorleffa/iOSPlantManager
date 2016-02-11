@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 protocol PlantsViewProtocol: AnyObject {
-    func receiveUser(user: User)
     func reloadData()
     func navigate(with: Plant)
 }
@@ -29,6 +28,10 @@ class PlantsViewController: BaseViewController<PlantsView> {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupNavigation()
+    }
+    
+    func setupNavigation() {
         navigationItem.backButtonTitle = ""
         navigationController?.tabBarController?.tabBar.isHidden = false
     }
@@ -55,7 +58,7 @@ extension PlantsViewController: UICollectionViewDataSource {
         if indexPath.section == 0 {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserInfoCollectionViewCell.identifier, for: indexPath) as? UserInfoCollectionViewCell {
                 let user = presenter.userModel()
-                cell.configure(with: .init(titlePrefix: "Olá,\n", title: user.name ?? "", imageUrl: user.profileImageUrl ?? ""))
+                cell.configure(with: .init(titlePrefix: "Olá", title: user.name ?? "", imageUrl: user.profileImageUrl ?? ""))
                 return cell
             }
         }
@@ -88,12 +91,7 @@ extension PlantsViewController: PlantsViewProtocol {
         }
     }
     
-    func receiveUser(user: User) {
-
-    }
-    
     func navigate(with plant: Plant) {
-        // TODO: passar planta para a outra view controller
         navigationController?.pushViewController(AddPlantViewController(plant: plant), animated: true)
     }
 }

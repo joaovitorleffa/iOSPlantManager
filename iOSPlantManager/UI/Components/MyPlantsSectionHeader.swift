@@ -17,7 +17,7 @@ class MyPlantsSectionHeader: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .background
+        setup()
         setupLayout()
     }
     
@@ -27,6 +27,10 @@ class MyPlantsSectionHeader: UIView {
     
     func configure(title: String) {
         titleLabel.text = title
+    }
+    
+    func setup() {
+        backgroundColor = .background
     }
 }
 

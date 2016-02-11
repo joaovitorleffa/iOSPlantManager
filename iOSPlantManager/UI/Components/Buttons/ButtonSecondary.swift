@@ -20,12 +20,7 @@ struct ButtonSecondaryModel {
 class ButtonSecondary: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        backgroundColor = .shape
-        layer.cornerRadius = 12
-        layer.masksToBounds = true
-        titleLabel?.font = .heading
-    
+        setup()
         setupLayout()
     }
     
@@ -33,11 +28,25 @@ class ButtonSecondary: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setup() {
+        backgroundColor = .shape
+        layer.cornerRadius = 12
+        layer.masksToBounds = true
+        titleLabel?.font = .heading
+    }
+    
     func configure(with model: ButtonSecondaryModel) {
         setTitle(model.text, for: .normal)
-        let color: UIColor? = model.variant == .normal ? .heading : .red
-        setTitleColor(color, for: .normal)
-       
+        setTitleColor(getColorBased(on: model.variant), for: .normal)
+    }
+    
+    private func getColorBased(on variant: ButtonSecondaryModel.Variant) -> UIColor? {
+        switch variant {
+        case .normal:
+            return UIColor.heading
+        case .danger:
+            return UIColor.red
+        }
     }
 }
 

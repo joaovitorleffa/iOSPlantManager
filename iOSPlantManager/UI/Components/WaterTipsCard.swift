@@ -31,7 +31,7 @@ class WaterTipsCard: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
+        setup()
         setupLayout()
     }
     
@@ -39,7 +39,7 @@ class WaterTipsCard: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupView() {
+    func setup() {
         backgroundColor = .blueLight
         layer.cornerRadius = 20
         layer.masksToBounds = true

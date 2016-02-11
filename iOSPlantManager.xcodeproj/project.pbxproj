@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2B09A31527BC350900C61B1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B09A31427BC350900C61B1E /* AppDelegate.swift */; };
-		2B09A31927BC350900C61B1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B09A31827BC350900C61B1E /* ViewController.swift */; };
 		2B09A31E27BC350B00C61B1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B09A31D27BC350B00C61B1E /* Assets.xcassets */; };
 		2B09A32127BC350B00C61B1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B09A31F27BC350B00C61B1E /* LaunchScreen.storyboard */; };
 		2B09A32C27BC350C00C61B1E /* iOSPlantManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B09A32B27BC350C00C61B1E /* iOSPlantManagerTests.swift */; };
@@ -40,6 +39,7 @@
 		2B09A37E27BC444100C61B1E /* Jost-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B09A36C27BC444100C61B1E /* Jost-SemiBoldItalic.ttf */; };
 		2B266FE61C6CA8D4004C7FC8 /* PopUpConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B266FE51C6CA8D4004C7FC8 /* PopUpConfirmationView.swift */; };
 		2B266FE81C6CBCB9004C7FC8 /* ButtonSecondary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B266FE71C6CBCB9004C7FC8 /* ButtonSecondary.swift */; };
+		2B266FEB1C6CEC0C004C7FC8 /* NSAttributedString+Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B266FEA1C6CEC0C004C7FC8 /* NSAttributedString+Weight.swift */; };
 		2B52345427BECABB008F666F /* AddPlantPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B52345327BECABB008F666F /* AddPlantPresenter.swift */; };
 		2B52345627BECBAF008F666F /* MyPlantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B52345527BECBAF008F666F /* MyPlantManager.swift */; };
 		2B52345D27BECCB9008F666F /* MyPlant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B52345B27BECCB9008F666F /* MyPlant+CoreDataClass.swift */; };
@@ -59,7 +59,7 @@
 		2BAFEE1427BE7FB9001473C2 /* MyPlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE1327BE7FB9001473C2 /* MyPlantsViewController.swift */; };
 		2BAFEE1627BE7FCA001473C2 /* MyPlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE1527BE7FCA001473C2 /* MyPlantsView.swift */; };
 		2BAFEE1827BE8B87001473C2 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE1727BE8B87001473C2 /* UserInfoView.swift */; };
-		2BAFEE1A27BE8C33001473C2 /* NSAttributedString+Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE1927BE8C33001473C2 /* NSAttributedString+Weight.swift */; };
+		2BAFEE1A27BE8C33001473C2 /* NSAttributedString+Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE1927BE8C33001473C2 /* NSAttributedString+Title.swift */; };
 		2BAFEE1D27BE8F9D001473C2 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 2BAFEE1C27BE8F9D001473C2 /* Nuke */; };
 		2BAFEE1F27BE8FB1001473C2 /* UIImageView+loadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE1E27BE8FB1001473C2 /* UIImageView+loadImage.swift */; };
 		2BAFEE2127BEA986001473C2 /* GreetingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE2027BEA986001473C2 /* GreetingPresenter.swift */; };
@@ -105,7 +105,6 @@
 /* Begin PBXFileReference section */
 		2B09A31127BC350900C61B1E /* iOSPlantManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPlantManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B09A31427BC350900C61B1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B09A31827BC350900C61B1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2B09A31D27BC350B00C61B1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B09A32027BC350B00C61B1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B09A32227BC350B00C61B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,6 +139,7 @@
 		2B09A36C27BC444100C61B1E /* Jost-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		2B266FE51C6CA8D4004C7FC8 /* PopUpConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpConfirmationView.swift; sourceTree = "<group>"; };
 		2B266FE71C6CBCB9004C7FC8 /* ButtonSecondary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSecondary.swift; sourceTree = "<group>"; };
+		2B266FEA1C6CEC0C004C7FC8 /* NSAttributedString+Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Weight.swift"; sourceTree = "<group>"; };
 		2B52345327BECABB008F666F /* AddPlantPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantPresenter.swift; sourceTree = "<group>"; };
 		2B52345527BECBAF008F666F /* MyPlantManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantManager.swift; sourceTree = "<group>"; };
 		2B52345B27BECCB9008F666F /* MyPlant+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyPlant+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 		2BAFEE1327BE7FB9001473C2 /* MyPlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsViewController.swift; sourceTree = "<group>"; };
 		2BAFEE1527BE7FCA001473C2 /* MyPlantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsView.swift; sourceTree = "<group>"; };
 		2BAFEE1727BE8B87001473C2 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
-		2BAFEE1927BE8C33001473C2 /* NSAttributedString+Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Weight.swift"; sourceTree = "<group>"; };
+		2BAFEE1927BE8C33001473C2 /* NSAttributedString+Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Title.swift"; sourceTree = "<group>"; };
 		2BAFEE1E27BE8FB1001473C2 /* UIImageView+loadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+loadImage.swift"; sourceTree = "<group>"; };
 		2BAFEE2027BEA986001473C2 /* GreetingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingPresenter.swift; sourceTree = "<group>"; };
 		2BAFEE2227BEAB4A001473C2 /* GreetingPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingPresenterTests.swift; sourceTree = "<group>"; };
@@ -240,7 +240,6 @@
 				2B09A34727BC36F600C61B1E /* UI */,
 				2B09A34427BC365400C61B1E /* Utils */,
 				2B09A31427BC350900C61B1E /* AppDelegate.swift */,
-				2B09A31827BC350900C61B1E /* ViewController.swift */,
 				2B09A31D27BC350B00C61B1E /* Assets.xcassets */,
 				2B09A31F27BC350B00C61B1E /* LaunchScreen.storyboard */,
 				2B09A32227BC350B00C61B1E /* Info.plist */,
@@ -289,16 +288,15 @@
 		2B09A34827BC36FA00C61B1E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2B266FE91C6CE810004C7FC8 /* Buttons */,
 				2BAFEE2827BEC0B1001473C2 /* Cells */,
 				2B09A34927BC370900C61B1E /* BaseViewController.swift */,
 				2BE0E2B927BD294300B08269 /* TextFieldPrimaryView.swift */,
-				2BE0E2BB27BD2C6600B08269 /* ButtonPrimary.swift */,
 				2BE0E2BD27BD3CCD00B08269 /* ViewWithKeyboard.swift */,
 				2BAFEE1727BE8B87001473C2 /* UserInfoView.swift */,
 				2B77B3E227BE868B00800173 /* WaterTipsCard.swift */,
 				2B52346127BEE9A2008F666F /* MyPlantsSectionHeader.swift */,
 				2B266FE51C6CA8D4004C7FC8 /* PopUpConfirmationView.swift */,
-				2B266FE71C6CBCB9004C7FC8 /* ButtonSecondary.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -322,9 +320,10 @@
 			children = (
 				2B09A35127BC3A1E00C61B1E /* UIColor+Palette.swift */,
 				2B09A35427BC3D4400C61B1E /* UIFonts+Fonts.swift */,
-				2BAFEE1927BE8C33001473C2 /* NSAttributedString+Weight.swift */,
+				2BAFEE1927BE8C33001473C2 /* NSAttributedString+Title.swift */,
 				2BAFEE1E27BE8FB1001473C2 /* UIImageView+loadImage.swift */,
 				2BAFEE2627BEBD48001473C2 /* UICollectionViewCompositionalLayout+Layouts.swift */,
+				2B266FEA1C6CEC0C004C7FC8 /* NSAttributedString+Weight.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -378,6 +377,15 @@
 				2B09A35B27BC444100C61B1E /* Jost-ThinItalic.ttf */,
 			);
 			path = Jost;
+			sourceTree = "<group>";
+		};
+		2B266FE91C6CE810004C7FC8 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				2B266FE71C6CBCB9004C7FC8 /* ButtonSecondary.swift */,
+				2BE0E2BB27BD2C6600B08269 /* ButtonPrimary.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		2B77B3DD27BE7F6000800173 /* AddPlant */ = {
@@ -636,7 +644,6 @@
 				2BAFEE0C27BE7CB3001473C2 /* PlantsViewController.swift in Sources */,
 				2BAFEE2127BEA986001473C2 /* GreetingPresenter.swift in Sources */,
 				2BE0E2F027BD930F00B08269 /* UserManager.swift in Sources */,
-				2B09A31927BC350900C61B1E /* ViewController.swift in Sources */,
 				2BE0E2B627BD1E6100B08269 /* UserIdentificationViewController.swift in Sources */,
 				2BAFEE2E27BEDDA4001473C2 /* MockedData.swift in Sources */,
 				2BAFEE1627BE7FCA001473C2 /* MyPlantsView.swift in Sources */,
@@ -646,7 +653,8 @@
 				2BE0E2F227BD958200B08269 /* CoreDataManager.swift in Sources */,
 				2B09A35227BC3A1E00C61B1E /* UIColor+Palette.swift in Sources */,
 				2BE0E2BA27BD294300B08269 /* TextFieldPrimaryView.swift in Sources */,
-				2BAFEE1A27BE8C33001473C2 /* NSAttributedString+Weight.swift in Sources */,
+				2BAFEE1A27BE8C33001473C2 /* NSAttributedString+Title.swift in Sources */,
+				2B266FEB1C6CEC0C004C7FC8 /* NSAttributedString+Weight.swift in Sources */,
 				2BAFEE2727BEBD48001473C2 /* UICollectionViewCompositionalLayout+Layouts.swift in Sources */,
 				2BAFEE0E27BE7CBD001473C2 /* PlantsPresenter.swift in Sources */,
 				2BAFEE1F27BE8FB1001473C2 /* UIImageView+loadImage.swift in Sources */,
