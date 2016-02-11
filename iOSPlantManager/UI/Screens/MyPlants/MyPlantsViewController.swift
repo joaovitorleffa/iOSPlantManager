@@ -40,10 +40,8 @@ extension MyPlantsViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let action = UIContextualAction(style: .destructive, title: "Deletar") { action, view, completion in
-//            let image = UIImageView()
-//            image.image = UIImage(systemName: "trash.fill")
-//            view.addSubview(image)
+        let action = UIContextualAction(style: .destructive, title: "Remover") { action, view, completion in
+            // TODO: remover planta
             completion(true)
         }
         

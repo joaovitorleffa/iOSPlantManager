@@ -22,7 +22,7 @@ class WaterTipsCard: UIView {
     
     let textLabel: UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.font = .headingLarge
+        $0.font = .heading
         $0.textColor = .blue
         $0.numberOfLines = 3
         $0.adjustsFontSizeToFitWidth = true

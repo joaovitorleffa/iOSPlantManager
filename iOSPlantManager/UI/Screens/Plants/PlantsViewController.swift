@@ -55,7 +55,7 @@ extension PlantsViewController: UICollectionViewDataSource {
         if indexPath.section == 0 {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserInfoCollectionViewCell.identifier, for: indexPath) as? UserInfoCollectionViewCell {
                 let user = presenter.userModel()
-                cell.configure(name: user.name ?? "", imageUrl: user.profileImageUrl ?? "")
+                cell.configure(with: .init(titlePrefix: "Olá,\n", title: user.name ?? "", imageUrl: user.profileImageUrl ?? ""))
                 return cell
             }
         }

@@ -7,6 +7,12 @@
 
 import UIKit
 
+struct UserInfoViewModel {
+    let titlePrefix: String
+    let title: String
+    let imageUrl: String
+}
+
 class UserInfoView: UIView {
     let containerStackView: UIStackView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -17,7 +23,7 @@ class UserInfoView: UIView {
     }(UIStackView())
     
     let greetingLabel: UILabel = {
-        $0.font = .titleLight
+        $0.font = .titleLargeLight
         $0.textColor = .heading
         $0.numberOfLines = 0
         return $0
@@ -41,15 +47,15 @@ class UserInfoView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(name: String, imageUrl: String) {
-        greetingLabel.attributedText = NSAttributedString(string: "Olá,\n").appendWeight(name)
+    func configure(with model: UserInfoViewModel) {
+        greetingLabel.attributedText = NSAttributedString(string: model.titlePrefix).appendWeight(model.title)
         
-        if imageUrl.isEmpty {
+        if model.imageUrl.isEmpty {
             imageView.image = UIImage(systemName: "person.fill")
             imageView.contentMode = .center
             imageView.tintColor = .systemGray
         } else {
-            imageView.loadImage(from: imageUrl)
+            imageView.loadImage(from: model.imageUrl)
         }
     }
 }
