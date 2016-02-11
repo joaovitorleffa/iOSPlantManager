@@ -53,10 +53,10 @@ class ConfirmationView: UIView {
         return $0
     }(UILabel())
     
-    let startButton: ButtonPrimaryView = {
+    let startButton: ButtonPrimary = {
         $0.configure(with: .init(text: "Começar"))
         return $0
-    }(ButtonPrimaryView())
+    }(ButtonPrimary())
     
     override init(frame: CGRect) {
         super.init(frame: frame)

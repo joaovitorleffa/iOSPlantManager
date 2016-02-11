@@ -7,34 +7,37 @@
 
 import UIKit
 
-struct ButtonPrimaryViewModel {
+struct ButtonPrimaryModel {
     let text: String
 }
 
-class ButtonPrimaryView: UIButton {
+class ButtonPrimary: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
+     
+        backgroundColor = .green
+        tintColor = .shape
+        layer.cornerRadius = 16
+        titleLabel?.font = .headingLargeSemiBold
+        
         setupLayout()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func configure(with model: ButtonPrimaryModel) {
+        setTitle(model.text, for: .normal)
+    }
 }
 
-extension ButtonPrimaryView {
-    func setupLayout() {
-        backgroundColor = .green
-        tintColor = .shape
-        layer.cornerRadius = 16
-        titleLabel?.font = .headingLargeSemiBold
-        
+extension ButtonPrimary: ViewCode {
+    func buildViewHierarchy() {}
+    
+    func setupConstraints() {
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 56)
         ])
-    }
-    
-    func configure(with model: ButtonPrimaryViewModel) {
-        setTitle(model.text, for: .normal)
     }
 }

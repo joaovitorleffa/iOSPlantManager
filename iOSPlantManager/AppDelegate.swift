@@ -19,8 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UINavigationController(rootViewController: firstScreen)
-        //window?.rootViewController = UserIdentificationViewController()
-        //window?.rootViewController = ConfirmationViewController()
         window?.makeKeyAndVisible()
         
         return true

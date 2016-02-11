@@ -44,12 +44,12 @@ class UserIdentificationView: ViewWithKeyboard {
         return $0
     }(TextFieldPrimaryView())
     
-    let confirmButton: ButtonPrimaryView = {
+    let confirmButton: ButtonPrimary = {
         $0.isEnabled = false
         $0.layer.opacity = 0.6
         $0.configure(with: .init(text: "Confirmar"))
         return $0
-    }(ButtonPrimaryView())
+    }(ButtonPrimary())
     
     
     

@@ -38,6 +38,8 @@
 		2B09A37C27BC444100C61B1E /* Jost-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B09A36A27BC444100C61B1E /* Jost-Regular.ttf */; };
 		2B09A37D27BC444100C61B1E /* Jost-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B09A36B27BC444100C61B1E /* Jost-ExtraBoldItalic.ttf */; };
 		2B09A37E27BC444100C61B1E /* Jost-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B09A36C27BC444100C61B1E /* Jost-SemiBoldItalic.ttf */; };
+		2B266FE61C6CA8D4004C7FC8 /* PopUpConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B266FE51C6CA8D4004C7FC8 /* PopUpConfirmationView.swift */; };
+		2B266FE81C6CBCB9004C7FC8 /* ButtonSecondary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B266FE71C6CBCB9004C7FC8 /* ButtonSecondary.swift */; };
 		2B52345427BECABB008F666F /* AddPlantPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B52345327BECABB008F666F /* AddPlantPresenter.swift */; };
 		2B52345627BECBAF008F666F /* MyPlantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B52345527BECBAF008F666F /* MyPlantManager.swift */; };
 		2B52345D27BECCB9008F666F /* MyPlant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B52345B27BECCB9008F666F /* MyPlant+CoreDataClass.swift */; };
@@ -72,7 +74,7 @@
 		2BE0E2B427BD1E1E00B08269 /* UserIdentificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B327BD1E1E00B08269 /* UserIdentificationView.swift */; };
 		2BE0E2B627BD1E6100B08269 /* UserIdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B527BD1E6100B08269 /* UserIdentificationViewController.swift */; };
 		2BE0E2BA27BD294300B08269 /* TextFieldPrimaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B927BD294300B08269 /* TextFieldPrimaryView.swift */; };
-		2BE0E2BC27BD2C6600B08269 /* ButtonPrimaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2BB27BD2C6600B08269 /* ButtonPrimaryView.swift */; };
+		2BE0E2BC27BD2C6600B08269 /* ButtonPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2BB27BD2C6600B08269 /* ButtonPrimary.swift */; };
 		2BE0E2BE27BD3CCD00B08269 /* ViewWithKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2BD27BD3CCD00B08269 /* ViewWithKeyboard.swift */; };
 		2BE0E2C027BD486800B08269 /* UserIdentificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2BF27BD486800B08269 /* UserIdentificationPresenter.swift */; };
 		2BE0E2C327BD70B900B08269 /* iOSPlantManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2C127BD70B900B08269 /* iOSPlantManager.xcdatamodeld */; };
@@ -136,6 +138,8 @@
 		2B09A36A27BC444100C61B1E /* Jost-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Regular.ttf"; sourceTree = "<group>"; };
 		2B09A36B27BC444100C61B1E /* Jost-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		2B09A36C27BC444100C61B1E /* Jost-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		2B266FE51C6CA8D4004C7FC8 /* PopUpConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpConfirmationView.swift; sourceTree = "<group>"; };
+		2B266FE71C6CBCB9004C7FC8 /* ButtonSecondary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSecondary.swift; sourceTree = "<group>"; };
 		2B52345327BECABB008F666F /* AddPlantPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantPresenter.swift; sourceTree = "<group>"; };
 		2B52345527BECBAF008F666F /* MyPlantManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantManager.swift; sourceTree = "<group>"; };
 		2B52345B27BECCB9008F666F /* MyPlant+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyPlant+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -168,7 +172,7 @@
 		2BE0E2B327BD1E1E00B08269 /* UserIdentificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationView.swift; sourceTree = "<group>"; };
 		2BE0E2B527BD1E6100B08269 /* UserIdentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationViewController.swift; sourceTree = "<group>"; };
 		2BE0E2B927BD294300B08269 /* TextFieldPrimaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPrimaryView.swift; sourceTree = "<group>"; };
-		2BE0E2BB27BD2C6600B08269 /* ButtonPrimaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPrimaryView.swift; sourceTree = "<group>"; };
+		2BE0E2BB27BD2C6600B08269 /* ButtonPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPrimary.swift; sourceTree = "<group>"; };
 		2BE0E2BD27BD3CCD00B08269 /* ViewWithKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithKeyboard.swift; sourceTree = "<group>"; };
 		2BE0E2BF27BD486800B08269 /* UserIdentificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationPresenter.swift; sourceTree = "<group>"; };
 		2BE0E2C227BD70B900B08269 /* iOSPlantManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSPlantManager.xcdatamodel; sourceTree = "<group>"; };
@@ -288,11 +292,13 @@
 				2BAFEE2827BEC0B1001473C2 /* Cells */,
 				2B09A34927BC370900C61B1E /* BaseViewController.swift */,
 				2BE0E2B927BD294300B08269 /* TextFieldPrimaryView.swift */,
-				2BE0E2BB27BD2C6600B08269 /* ButtonPrimaryView.swift */,
+				2BE0E2BB27BD2C6600B08269 /* ButtonPrimary.swift */,
 				2BE0E2BD27BD3CCD00B08269 /* ViewWithKeyboard.swift */,
 				2BAFEE1727BE8B87001473C2 /* UserInfoView.swift */,
 				2B77B3E227BE868B00800173 /* WaterTipsCard.swift */,
 				2B52346127BEE9A2008F666F /* MyPlantsSectionHeader.swift */,
+				2B266FE51C6CA8D4004C7FC8 /* PopUpConfirmationView.swift */,
+				2B266FE71C6CBCB9004C7FC8 /* ButtonSecondary.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -647,6 +653,7 @@
 				2B09A34F27BC37EE00C61B1E /* GreetingView.swift in Sources */,
 				2B77B3DF27BE7F7300800173 /* AddPlantView.swift in Sources */,
 				2B09A35527BC3D4400C61B1E /* UIFonts+Fonts.swift in Sources */,
+				2B266FE81C6CBCB9004C7FC8 /* ButtonSecondary.swift in Sources */,
 				2BE0E2C627BD71AF00B08269 /* User+CoreDataClass.swift in Sources */,
 				2B77B3E327BE868B00800173 /* WaterTipsCard.swift in Sources */,
 				2BAFEE0527BE6BDE001473C2 /* ConfirmationView.swift in Sources */,
@@ -666,11 +673,12 @@
 				2B09A31527BC350900C61B1E /* AppDelegate.swift in Sources */,
 				2BAFEE2C27BED039001473C2 /* UserInfoCollectionViewCell.swift in Sources */,
 				2B52345627BECBAF008F666F /* MyPlantManager.swift in Sources */,
-				2BE0E2BC27BD2C6600B08269 /* ButtonPrimaryView.swift in Sources */,
+				2BE0E2BC27BD2C6600B08269 /* ButtonPrimary.swift in Sources */,
 				2B52345427BECABB008F666F /* AddPlantPresenter.swift in Sources */,
 				2BE0E2BE27BD3CCD00B08269 /* ViewWithKeyboard.swift in Sources */,
 				2B09A34627BC366200C61B1E /* ViewCode.swift in Sources */,
 				2BE0E2B427BD1E1E00B08269 /* UserIdentificationView.swift in Sources */,
+				2B266FE61C6CA8D4004C7FC8 /* PopUpConfirmationView.swift in Sources */,
 				2BAFEE0A27BE7C97001473C2 /* PlantsView.swift in Sources */,
 				2B77B3DC27BE7B3800800173 /* Requester.swift in Sources */,
 			);

@@ -76,10 +76,10 @@ class AddPlantView: UIView {
         return $0
     }(UIDatePicker())
     
-    let addButton: ButtonPrimaryView = {
+    let addButton: ButtonPrimary = {
         $0.configure(with: .init(text: "Cadastrar Planta"))
         return $0
-    }(ButtonPrimaryView())
+    }(ButtonPrimary())
     
     override init(frame: CGRect) {
         super.init(frame: frame)
