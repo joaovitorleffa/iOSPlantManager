@@ -321,9 +321,9 @@
 				2B09A35127BC3A1E00C61B1E /* UIColor+Palette.swift */,
 				2B09A35427BC3D4400C61B1E /* UIFonts+Fonts.swift */,
 				2BAFEE1927BE8C33001473C2 /* NSAttributedString+Title.swift */,
+				2B266FEA1C6CEC0C004C7FC8 /* NSAttributedString+Weight.swift */,
 				2BAFEE1E27BE8FB1001473C2 /* UIImageView+loadImage.swift */,
 				2BAFEE2627BEBD48001473C2 /* UICollectionViewCompositionalLayout+Layouts.swift */,
-				2B266FEA1C6CEC0C004C7FC8 /* NSAttributedString+Weight.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

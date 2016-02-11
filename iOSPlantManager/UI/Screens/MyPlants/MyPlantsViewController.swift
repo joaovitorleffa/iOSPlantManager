@@ -48,7 +48,11 @@ extension MyPlantsViewController: UITableViewDelegate {
         let action = UIContextualAction(style: .destructive, title: "Remover") { action, view, completion in
             // TODO: remover planta
             var popUp: PopUpConfirmationViewController!
-            popUp = PopUpConfirmationViewController(imageUrl: "", message: "Deseja mesmo deletar sua Peperomia?")
+            
+            popUp = PopUpConfirmationViewController(
+                imageUrl: "",
+                message: NSAttributedString.formatDeleteMessage(message: "Deseja mesmo deletar sua ", plantName: "Peperomia")
+            )
             self.present(popUp, animated: true, completion: nil)
             completion(true)
         }

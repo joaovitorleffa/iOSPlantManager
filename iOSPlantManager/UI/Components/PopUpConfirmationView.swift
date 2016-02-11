@@ -117,10 +117,10 @@ extension PopUpConfirmationView: ViewCode {
 
 
 class PopUpConfirmationViewController: BaseViewController<PopUpConfirmationView> {
-    init(imageUrl: String, message: String) {
+    init(imageUrl: String, message: NSAttributedString) {
         super.init()
         customView.imageView.loadImage(from: imageUrl)
-        customView.messageLabel.text = message
+        customView.messageLabel.attributedText = message
         customView.deleteBtn.addTarget(self, action: #selector(onCancel), for: .touchUpInside)
         customView.cancelBtn.addTarget(self, action: #selector(onCancel), for: .touchUpInside)
     }
