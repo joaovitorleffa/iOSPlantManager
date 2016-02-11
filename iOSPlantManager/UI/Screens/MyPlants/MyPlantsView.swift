@@ -23,6 +23,8 @@ class MyPlantsView: UIView {
     let tableView: UITableView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.bounces = false
+        $0.showsVerticalScrollIndicator = false
+        
         return $0
     }(UITableView())
     

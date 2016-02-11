@@ -7,6 +7,13 @@
 
 import UIKit
 
+struct ConfirmationViewModel {
+    let emoji: String
+    let title: String
+    let message: String
+    let buttonText: String
+}
+
 class ConfirmationView: UIView {
     let containerStackView: UIStackView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -30,7 +37,6 @@ class ConfirmationView: UIView {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.font = .systemFont(ofSize: 64)
         $0.textAlignment = .center
-        $0.text = "😁"
         return $0
     }(UILabel())
     
@@ -39,7 +45,6 @@ class ConfirmationView: UIView {
         $0.font = .title
         $0.textColor = .heading
         $0.textAlignment = .center
-        $0.text = "Prontinho"
         return $0
     }(UILabel())
     
@@ -49,12 +54,11 @@ class ConfirmationView: UIView {
         $0.textColor = .body
         $0.textAlignment = .center
         $0.numberOfLines = 0
-        $0.text = "Agora vamos começar a cuidar das suas plantinhas com muito cuidado."
         return $0
     }(UILabel())
     
     let startButton: ButtonPrimary = {
-        $0.configure(with: .init(text: "Começar"))
+        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(ButtonPrimary())
     
@@ -66,6 +70,13 @@ class ConfirmationView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configure(width model: ConfirmationViewModel) {
+        emojiLabel.text = model.emoji
+        titleLabel.text = model.title
+        descriptionLabel.text = model.message
+        startButton.configure(with: .init(text: model.buttonText))
     }
 }
 

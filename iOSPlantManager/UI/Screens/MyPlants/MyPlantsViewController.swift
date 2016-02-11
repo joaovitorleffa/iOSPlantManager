@@ -10,12 +10,16 @@ import UIKit
 class MyPlantsViewController: BaseViewController<MyPlantsView> {
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.tabBarController?.tabBar.isHidden = false
     
         customView.tableView.delegate = self
         customView.tableView.dataSource = self
         
         customView.tableView.register(MyPlantTableViewCell.self, forCellReuseIdentifier: MyPlantTableViewCell.identifier)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.tabBarController?.tabBar.isHidden = false
     }
 }
 
@@ -58,7 +62,7 @@ extension MyPlantsViewController: UITableViewDelegate {
 
 extension MyPlantsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       4
+       20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

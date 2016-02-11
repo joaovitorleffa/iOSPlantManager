@@ -51,10 +51,23 @@ class AddPlantViewController: BaseViewController<AddPlantView> {
 
 extension AddPlantViewController: AddPlantViewProtocol {
     func saved() {
-        tabBarController?.selectedIndex = 1
+        let vcModel = ConfirmationViewModel(
+                            emoji: "🤗", title: "Tudo certo",
+                            message: "Fique tranquilo que sempre vamos lembrar você de cuidar da sua platinha com bastante amor.",
+                            buttonText: "Entendi")
+        let vc = ConfirmationViewController(vcModel)
+        vc.delegate = self
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func invalidDate() {
     
+    }
+}
+
+extension AddPlantViewController: ConfirmationViewDelegate {
+    func onTapButton() {
+        tabBarController?.selectedIndex = 1
+        navigationController?.popToRootViewController(animated: false)
     }
 }

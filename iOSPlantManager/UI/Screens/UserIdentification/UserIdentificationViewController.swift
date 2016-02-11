@@ -34,8 +34,21 @@ class UserIdentificationViewController: BaseViewController<UserIdentificationVie
     private func onSave() {
         let success = presenter.saveName()
         if success {
-            navigationController?.pushViewController(ConfirmationViewController(), animated: true)
+            let vcModel = ConfirmationViewModel(emoji: "😁",
+                                                title: "Prontinho",
+                                                message: "Agora vamos começar a cuidar das suas plantinhas com muito cuidado.",
+                                                buttonText: "Começar")
+            let vc = ConfirmationViewController(vcModel)
+            vc.delegate = self
+            
+            navigationController?.pushViewController(vc, animated: true)
         }
+    }
+}
+
+extension UserIdentificationViewController: ConfirmationViewDelegate {
+    func onTapButton() {
+        navigationController?.pushViewController(TabBarViewController(), animated: false)
     }
 }
 

@@ -17,6 +17,7 @@ class MyPlantsSectionHeader: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .background
         setupLayout()
     }
     

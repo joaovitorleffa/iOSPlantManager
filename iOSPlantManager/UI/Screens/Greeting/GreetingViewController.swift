@@ -13,6 +13,7 @@ class GreetingViewController: BaseViewController<GreetingView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
         handleNavigation()
         customView.nextButton.addTarget(self, action: #selector(onTapNextButton), for: .touchUpInside)
