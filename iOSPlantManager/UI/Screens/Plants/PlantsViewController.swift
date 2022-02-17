@@ -11,6 +11,7 @@ import UIKit
 protocol PlantsViewProtocol: AnyObject {
     func receiveUser(user: User)
     func reloadData()
+    func navigate(with: Plant)
 }
 
 class PlantsViewController: BaseViewController<PlantsView> {
@@ -24,6 +25,12 @@ class PlantsViewController: BaseViewController<PlantsView> {
         customView.collectionView.register(UserInfoCollectionViewCell.self, forCellWithReuseIdentifier: UserInfoCollectionViewCell.identifier)
         customView.collectionView.register(PlantEnvironmentCollectionViewCell.self, forCellWithReuseIdentifier: PlantEnvironmentCollectionViewCell.indetifier)
         customView.collectionView.register(PlantCollectionViewCell.self, forCellWithReuseIdentifier: PlantCollectionViewCell.identifier)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.backButtonTitle = ""
+        navigationController?.tabBarController?.tabBar.isHidden = false
     }
 }
 
@@ -83,5 +90,10 @@ extension PlantsViewController: PlantsViewProtocol {
     
     func receiveUser(user: User) {
 
+    }
+    
+    func navigate(with plant: Plant) {
+        // TODO: passar planta para a outra view controller
+        navigationController?.pushViewController(AddPlantViewController(plant: plant), animated: true)
     }
 }

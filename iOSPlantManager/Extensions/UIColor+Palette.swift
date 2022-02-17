@@ -11,6 +11,9 @@ extension UIColor {
     static let green = UIColor(named: "green")
     static let greenDark = UIColor(named: "greenDark")
     static let greenLight = UIColor(named: "greenLight")
+    static let blue = UIColor(named: "blue")
+    static let blueLight = UIColor(named: "blueLight")
+    static let red = UIColor(named: "red")
     
     static let shape = UIColor(named: "shape")
     static let border = UIColor(named: "border")

@@ -99,7 +99,7 @@ extension UserIdentificationView: ViewCode {
             containerView.topAnchor.constraint(equalTo: topAnchor),
             containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            containerView.bottomAnchor.constraint(equalTo: keyboardLayoutGuide.topAnchor),
+            containerView.bottomAnchor.constraint(equalTo: customKeyboardLayoutGuide.topAnchor),
         
             contentStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 72),
             contentStackView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),

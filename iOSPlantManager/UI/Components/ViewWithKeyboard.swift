@@ -106,7 +106,7 @@ class ViewWithKeyboard: UIView {
             return
         }
         
-        let constraint = self.keyboardLayoutGuide.constraintsAffectingLayout(for: .vertical).first {
+        let constraint = self.customKeyboardLayoutGuide.constraintsAffectingLayout(for: .vertical).first {
             $0.firstAttribute == .height
         }
         

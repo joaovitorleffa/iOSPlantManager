@@ -71,5 +71,9 @@ extension PlantsPrensenter: PlantsPresenterProtocol {
             selectedEnvironment = environmentModel(indexPath: indexPath).environment
             view?.reloadData()
         }
+        
+        if indexPath.section == 2 {
+            view?.navigate(with: plants[indexPath.row])
+        }
     }
 }

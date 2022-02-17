@@ -13,8 +13,8 @@ class PlantCollectionViewCell: UICollectionViewCell {
     let containerStackView: UIStackView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .vertical
-        $0.alignment = .center
-        $0.distribution = .fillEqually
+        $0.alignment = .fill
+        $0.distribution = .fill
         return $0
     }(UIStackView())
     
@@ -26,7 +26,7 @@ class PlantCollectionViewCell: UICollectionViewCell {
     
     let titleLabel: UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.font = .title
+        $0.font = .headingLargeSemiBold
         $0.textColor = .heading
         $0.textAlignment = .center
         $0.numberOfLines = 1
@@ -65,7 +65,7 @@ extension PlantCollectionViewCell: ViewCode {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            containerStackView.topAnchor.constraint(equalTo: topAnchor),
+            containerStackView.topAnchor.constraint(equalTo: topAnchor,constant: 12),
             containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             containerStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             containerStackView.centerYAnchor.constraint(equalTo: centerYAnchor),
