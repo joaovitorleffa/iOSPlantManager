@@ -15,10 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let firstScreen = GreetingViewController()
+        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = GreetingViewController()
-//        window?.rootViewController = UserIdentificationViewController()
-//        window?.rootViewController = ConfirmationViewController()
+        window?.rootViewController = UINavigationController(rootViewController: firstScreen)
+        //window?.rootViewController = UserIdentificationViewController()
+        //window?.rootViewController = ConfirmationViewController()
         window?.makeKeyAndVisible()
         
         return true

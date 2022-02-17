@@ -18,6 +18,7 @@ class UserIdentificationViewController: BaseViewController<UserIdentificationVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = true
         
         customView.nameTextField.addTarget(self, action: #selector(onChangeText), for: .editingChanged)
         customView.confirmButton.addTarget(self, action: #selector(onSave), for: .touchUpInside)

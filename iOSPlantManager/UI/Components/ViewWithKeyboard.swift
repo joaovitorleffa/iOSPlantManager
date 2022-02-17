@@ -60,18 +60,18 @@ struct AnimationInfo {
 
 class ViewWithKeyboard: UIView {
     private var cancellables: Set<AnyCancellable> = []
-//    let keyboardLayoutGuide = UILayoutGuide()
+    let customKeyboardLayoutGuide = UILayoutGuide()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        addLayoutGuide(keyboardLayoutGuide)
+        addLayoutGuide(customKeyboardLayoutGuide)
         
         NSLayoutConstraint.activate([
-            keyboardLayoutGuide.leadingAnchor.constraint(equalTo: leadingAnchor),
-            keyboardLayoutGuide.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-            keyboardLayoutGuide.trailingAnchor.constraint(equalTo: trailingAnchor),
-            keyboardLayoutGuide.heightAnchor.constraint(equalToConstant: 0)
+            customKeyboardLayoutGuide.leadingAnchor.constraint(equalTo: leadingAnchor),
+            customKeyboardLayoutGuide.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            customKeyboardLayoutGuide.trailingAnchor.constraint(equalTo: trailingAnchor),
+            customKeyboardLayoutGuide.heightAnchor.constraint(equalToConstant: 0)
         ])
     }
     
