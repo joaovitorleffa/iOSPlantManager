@@ -30,7 +30,7 @@ class PlantsViewController: BaseViewController<PlantsView> {
 // MARK: - CollectionView delegates
 extension PlantsViewController: UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        2
+        3
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -62,6 +62,8 @@ extension PlantsViewController: UICollectionViewDataSource {
         }
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlantCollectionViewCell.identifier, for: indexPath) as? PlantCollectionViewCell {
+            let plant = presenter.plantModel(indexPath: indexPath)
+            cell.configure(imageUrl: plant.photo, name: plant.name)
             return cell
         }
         

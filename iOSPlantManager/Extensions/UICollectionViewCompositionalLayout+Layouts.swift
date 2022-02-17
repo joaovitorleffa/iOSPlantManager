@@ -16,7 +16,7 @@ extension UICollectionViewCompositionalLayout {
             case 1:
                 return .carouselSection()
             default:
-                return .staticSection()
+                return .defaultSection()
             }
         }
     }
@@ -54,15 +54,23 @@ extension NSCollectionLayoutSection {
     }
     
     static func defaultSection() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalWidth(0.5))
+        let itemCellSize = calculateCellSize()
+        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(itemCellSize), heightDimension: .absolute(itemCellSize))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
+         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.5))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        group.interItemSpacing = .fixed(12)
+        group.edgeSpacing = .init(leading: nil, top: nil, trailing: nil, bottom: .fixed(12))
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = .init(top: 0, leading: 32, bottom: 0, trailing: 32)
+        section.contentInsets = .init(top: 32, leading: 32, bottom: 32, trailing: 32)
         
         return section
+    }
+    
+    private static func calculateCellSize() -> CGFloat {
+        let width = UIScreen.main.bounds.width
+        return (width - 76) / 2
     }
 }

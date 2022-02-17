@@ -38,7 +38,9 @@ extension PlantEnvironment {
 extension Plant {
     static func mock() -> [Plant] {
         [
-            Plant(id: 1, name: "Aningapara", about: "É uma espécie tropical que tem crescimento rápido e fácil manuseio.", waterTips: "Mantenha a terra sempre húmida sem encharcar. Regue 2 vezes na semana.", photo: "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/1.svg", environments: [.living_room], frequency: .init(times: 2, repeatEvery: .week))
+            Plant(id: 1, name: "Aningapara", about: "É uma espécie tropical que tem crescimento rápido e fácil manuseio.", waterTips: "Mantenha a terra sempre húmida sem encharcar. Regue 2 vezes na semana.", photo: "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/1.svg", environments: [.living_room], frequency: .init(times: 2, repeatEvery: .week)),
+            Plant(id: 2, name: "Aningapara", about: "É uma espécie tropical que tem crescimento rápido e fácil manuseio.", waterTips: "Mantenha a terra sempre húmida sem encharcar. Regue 2 vezes na semana.", photo: "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/1.svg", environments: [.living_room], frequency: .init(times: 2, repeatEvery: .week)),
+            Plant(id: 3, name: "Aningapara", about: "É uma espécie tropical que tem crescimento rápido e fácil manuseio.", waterTips: "Mantenha a terra sempre húmida sem encharcar. Regue 2 vezes na semana.", photo: "https://storage.googleapis.com/golden-wind/nextlevelweek/05-plantmanager/1.svg", environments: [.living_room], frequency: .init(times: 2, repeatEvery: .week))
         ]
     }
 }

@@ -12,6 +12,7 @@ protocol PlantsPresenterProtocol: AnyObject {
     func fetchPlants()
     func userModel() -> User
     func environmentModel(indexPath: IndexPath) -> (environment: PlantEnvironment, isSelected: Bool)
+    func plantModel(indexPath: IndexPath) -> Plant
     func numberOfItensInSection(section: Int) -> Int
     func didSelectItem(indexPath: IndexPath)
 }
@@ -46,6 +47,10 @@ extension PlantsPrensenter: PlantsPresenterProtocol {
         let environment = environments[indexPath.row]
         let isSelected = selectedEnvironment != nil && environment.key == selectedEnvironment!.key
         return (environment: environment, isSelected: isSelected)
+    }
+    
+    func plantModel(indexPath: IndexPath) -> Plant {
+        plants[indexPath.row]
     }
     
     func numberOfItensInSection(section: Int) -> Int {
