@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ConfirmantionView: UIView {
+class ConfirmationView: UIView {
     let containerStackView: UIStackView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .vertical
@@ -69,7 +69,7 @@ class ConfirmantionView: UIView {
     }
 }
 
-extension ConfirmantionView: ViewCode {
+extension ConfirmationView: ViewCode {
     func buildViewHierarchy() {
         addSubview(containerStackView)
         containerStackView.addArrangedSubview(emojiLabel)

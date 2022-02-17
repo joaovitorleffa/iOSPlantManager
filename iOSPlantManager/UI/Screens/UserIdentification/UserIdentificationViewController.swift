@@ -33,16 +33,15 @@ class UserIdentificationViewController: BaseViewController<UserIdentificationVie
     
     @objc
     private func onSave() {
-        presenter.saveName()
+        let success = presenter.saveName()
+        if success {
+            navigationController?.pushViewController(ConfirmationViewController(), animated: true)
+        }
     }
 }
 
 extension UserIdentificationViewController: UserIdentificationViewProtocol {
     func updateScreen(isFilled: Bool) {
-        if isFilled == true {
-            customView.confirmState()
-        } else {
-            customView.initialState()
-        }
+        isFilled == true ? customView.confirmState() : customView.initialState()
     }
 }

@@ -41,6 +41,13 @@
 		2BAFEE0227BE6B0D001473C2 /* CoreDataTestStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2F327BD970000B08269 /* CoreDataTestStack.swift */; };
 		2BAFEE0527BE6BDE001473C2 /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE0427BE6BDE001473C2 /* ConfirmationView.swift */; };
 		2BAFEE0727BE6C5D001473C2 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE0627BE6C5D001473C2 /* ConfirmationViewController.swift */; };
+		2BAFEE0A27BE7C97001473C2 /* PlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE0927BE7C97001473C2 /* PlantsView.swift */; };
+		2BAFEE0C27BE7CB3001473C2 /* PlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE0B27BE7CB3001473C2 /* PlantsViewController.swift */; };
+		2BAFEE0E27BE7CBD001473C2 /* PlantsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE0D27BE7CBD001473C2 /* PlantsPresenter.swift */; };
+		2BAFEE1127BE7F64001473C2 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE1027BE7F64001473C2 /* TabBarViewController.swift */; };
+		2BAFEE1427BE7FB9001473C2 /* MyPlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE1327BE7FB9001473C2 /* MyPlantsViewController.swift */; };
+		2BAFEE1627BE7FCA001473C2 /* MyPlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE1527BE7FCA001473C2 /* MyPlantsView.swift */; };
+		2BAFEE1827BE8B87001473C2 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE1727BE8B87001473C2 /* UserInfoView.swift */; };
 		2BE0E2B427BD1E1E00B08269 /* UserIdentificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B327BD1E1E00B08269 /* UserIdentificationView.swift */; };
 		2BE0E2B627BD1E6100B08269 /* UserIdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B527BD1E6100B08269 /* UserIdentificationViewController.swift */; };
 		2BE0E2BA27BD294300B08269 /* TextFieldPrimaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B927BD294300B08269 /* TextFieldPrimaryView.swift */; };
@@ -110,6 +117,13 @@
 		2B09A36C27BC444100C61B1E /* Jost-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		2BAFEE0427BE6BDE001473C2 /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		2BAFEE0627BE6C5D001473C2 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		2BAFEE0927BE7C97001473C2 /* PlantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsView.swift; sourceTree = "<group>"; };
+		2BAFEE0B27BE7CB3001473C2 /* PlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsViewController.swift; sourceTree = "<group>"; };
+		2BAFEE0D27BE7CBD001473C2 /* PlantsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsPresenter.swift; sourceTree = "<group>"; };
+		2BAFEE1027BE7F64001473C2 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		2BAFEE1327BE7FB9001473C2 /* MyPlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsViewController.swift; sourceTree = "<group>"; };
+		2BAFEE1527BE7FCA001473C2 /* MyPlantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsView.swift; sourceTree = "<group>"; };
+		2BAFEE1727BE8B87001473C2 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		2BE0E2B327BD1E1E00B08269 /* UserIdentificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationView.swift; sourceTree = "<group>"; };
 		2BE0E2B527BD1E6100B08269 /* UserIdentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationViewController.swift; sourceTree = "<group>"; };
 		2BE0E2B927BD294300B08269 /* TextFieldPrimaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPrimaryView.swift; sourceTree = "<group>"; };
@@ -232,6 +246,7 @@
 				2BE0E2B927BD294300B08269 /* TextFieldPrimaryView.swift */,
 				2BE0E2BB27BD2C6600B08269 /* ButtonPrimaryView.swift */,
 				2BE0E2BD27BD3CCD00B08269 /* ViewWithKeyboard.swift */,
+				2BAFEE1727BE8B87001473C2 /* UserInfoView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -239,6 +254,9 @@
 		2B09A34B27BC37B600C61B1E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				2BAFEE1227BE7FA1001473C2 /* MyPlants */,
+				2BAFEE0F27BE7F38001473C2 /* TabBar */,
+				2BAFEE0827BE7C5F001473C2 /* Plants */,
 				2BAFEE0327BE6B9E001473C2 /* Confirmation */,
 				2BE0E2B227BD1E0300B08269 /* UserIdentification */,
 				2B09A35327BC3B7900C61B1E /* Greeting */,
@@ -312,6 +330,33 @@
 				2BAFEE0627BE6C5D001473C2 /* ConfirmationViewController.swift */,
 			);
 			path = Confirmation;
+			sourceTree = "<group>";
+		};
+		2BAFEE0827BE7C5F001473C2 /* Plants */ = {
+			isa = PBXGroup;
+			children = (
+				2BAFEE0927BE7C97001473C2 /* PlantsView.swift */,
+				2BAFEE0B27BE7CB3001473C2 /* PlantsViewController.swift */,
+				2BAFEE0D27BE7CBD001473C2 /* PlantsPresenter.swift */,
+			);
+			path = Plants;
+			sourceTree = "<group>";
+		};
+		2BAFEE0F27BE7F38001473C2 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				2BAFEE1027BE7F64001473C2 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		2BAFEE1227BE7FA1001473C2 /* MyPlants */ = {
+			isa = PBXGroup;
+			children = (
+				2BAFEE1327BE7FB9001473C2 /* MyPlantsViewController.swift */,
+				2BAFEE1527BE7FCA001473C2 /* MyPlantsView.swift */,
+			);
+			path = MyPlants;
 			sourceTree = "<group>";
 		};
 		2BE0E2B227BD1E0300B08269 /* UserIdentification */ = {
@@ -498,12 +543,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BAFEE0C27BE7CB3001473C2 /* PlantsViewController.swift in Sources */,
 				2BE0E2F027BD930F00B08269 /* UserManager.swift in Sources */,
 				2B09A31927BC350900C61B1E /* ViewController.swift in Sources */,
 				2BE0E2B627BD1E6100B08269 /* UserIdentificationViewController.swift in Sources */,
+				2BAFEE1627BE7FCA001473C2 /* MyPlantsView.swift in Sources */,
+				2BAFEE1427BE7FB9001473C2 /* MyPlantsViewController.swift in Sources */,
 				2BE0E2F227BD958200B08269 /* CoreDataManager.swift in Sources */,
 				2B09A35227BC3A1E00C61B1E /* UIColor+Palette.swift in Sources */,
 				2BE0E2BA27BD294300B08269 /* TextFieldPrimaryView.swift in Sources */,
+				2BAFEE0E27BE7CBD001473C2 /* PlantsPresenter.swift in Sources */,
 				2B09A34F27BC37EE00C61B1E /* GreetingView.swift in Sources */,
 				2B09A35527BC3D4400C61B1E /* UIFonts+Fonts.swift in Sources */,
 				2BE0E2C627BD71AF00B08269 /* User+CoreDataClass.swift in Sources */,
@@ -512,12 +561,15 @@
 				2B09A34D27BC37C600C61B1E /* GreetingViewController.swift in Sources */,
 				2BE0E2C027BD486800B08269 /* UserIdentificationPresenter.swift in Sources */,
 				2B09A34A27BC370900C61B1E /* BaseViewController.swift in Sources */,
+				2BAFEE1827BE8B87001473C2 /* UserInfoView.swift in Sources */,
+				2BAFEE1127BE7F64001473C2 /* TabBarViewController.swift in Sources */,
 				2BAFEE0727BE6C5D001473C2 /* ConfirmationViewController.swift in Sources */,
 				2B09A31527BC350900C61B1E /* AppDelegate.swift in Sources */,
 				2BE0E2BC27BD2C6600B08269 /* ButtonPrimaryView.swift in Sources */,
 				2BE0E2BE27BD3CCD00B08269 /* ViewWithKeyboard.swift in Sources */,
 				2B09A34627BC366200C61B1E /* ViewCode.swift in Sources */,
 				2BE0E2B427BD1E1E00B08269 /* UserIdentificationView.swift in Sources */,
+				2BAFEE0A27BE7C97001473C2 /* PlantsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
