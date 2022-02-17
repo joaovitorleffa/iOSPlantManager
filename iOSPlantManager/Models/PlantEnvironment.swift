@@ -10,12 +10,12 @@ import Foundation
 struct PlantEnvironment: Decodable {
     let key: PlantEnvironmentKey
     let title: String
-    
-    enum PlantEnvironmentKey: String, Decodable {
-        case living_room
-        case bedroom
-        case kitchen
-        case bathroom
-        case balcony
-    }
+}
+
+enum PlantEnvironmentKey: String, Decodable {
+    case living_room
+    case bedroom
+    case kitchen
+    case bathroom
+    case balcony
 }

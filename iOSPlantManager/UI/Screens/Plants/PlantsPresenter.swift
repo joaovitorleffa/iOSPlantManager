@@ -20,6 +20,7 @@ class PlantsPrensenter {
     private var userManager: UserManagerProtocol
     private weak var view: PlantsViewProtocol?
     private var environments: [PlantEnvironment] = PlantEnvironment.mock()
+    private var plants: [Plant] = Plant.mock()
     private lazy var selectedEnvironment: PlantEnvironment? = environments.first
     
     init(view: PlantsViewProtocol, userManager: UserManagerProtocol = UserManager()) {
@@ -51,8 +52,13 @@ extension PlantsPrensenter: PlantsPresenterProtocol {
         if section == 0 {
             return 1
         }
+        
+        if section == 1 {
+            return environments.count
+        }
        
-       return environments.count
+        return plants.count
+       
     }
     
     func didSelectItem(indexPath: IndexPath) {

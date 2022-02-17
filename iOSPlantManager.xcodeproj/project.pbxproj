@@ -58,6 +58,8 @@
 		2BAFEE2A27BEC0D0001473C2 /* PlantEnvironmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE2927BEC0D0001473C2 /* PlantEnvironmentCollectionViewCell.swift */; };
 		2BAFEE2C27BED039001473C2 /* UserInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE2B27BED039001473C2 /* UserInfoCollectionViewCell.swift */; };
 		2BAFEE2E27BEDDA4001473C2 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE2D27BEDDA4001473C2 /* MockedData.swift */; };
+		2BAFEE3027BEEBAE001473C2 /* PlantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE2F27BEEBAE001473C2 /* PlantCollectionViewCell.swift */; };
+		2BAFEE3227BEECA7001473C2 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE3127BEECA7001473C2 /* Plant.swift */; };
 		2BE0E2B427BD1E1E00B08269 /* UserIdentificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B327BD1E1E00B08269 /* UserIdentificationView.swift */; };
 		2BE0E2B627BD1E6100B08269 /* UserIdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B527BD1E6100B08269 /* UserIdentificationViewController.swift */; };
 		2BE0E2BA27BD294300B08269 /* TextFieldPrimaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B927BD294300B08269 /* TextFieldPrimaryView.swift */; };
@@ -143,6 +145,8 @@
 		2BAFEE2927BEC0D0001473C2 /* PlantEnvironmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantEnvironmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		2BAFEE2B27BED039001473C2 /* UserInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		2BAFEE2D27BEDDA4001473C2 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
+		2BAFEE2F27BEEBAE001473C2 /* PlantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCollectionViewCell.swift; sourceTree = "<group>"; };
+		2BAFEE3127BEECA7001473C2 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		2BE0E2B327BD1E1E00B08269 /* UserIdentificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationView.swift; sourceTree = "<group>"; };
 		2BE0E2B527BD1E6100B08269 /* UserIdentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationViewController.swift; sourceTree = "<group>"; };
 		2BE0E2B927BD294300B08269 /* TextFieldPrimaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPrimaryView.swift; sourceTree = "<group>"; };
@@ -390,6 +394,7 @@
 			children = (
 				2BAFEE2927BEC0D0001473C2 /* PlantEnvironmentCollectionViewCell.swift */,
 				2BAFEE2B27BED039001473C2 /* UserInfoCollectionViewCell.swift */,
+				2BAFEE2F27BEEBAE001473C2 /* PlantCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 				2BE0E2C427BD71AF00B08269 /* User+CoreDataClass.swift */,
 				2BAFEE2427BEB28F001473C2 /* PlantEnvironment.swift */,
 				2BAFEE2D27BEDDA4001473C2 /* MockedData.swift */,
+				2BAFEE3127BEECA7001473C2 /* Plant.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -594,6 +600,7 @@
 				2BAFEE2E27BEDDA4001473C2 /* MockedData.swift in Sources */,
 				2BAFEE1627BE7FCA001473C2 /* MyPlantsView.swift in Sources */,
 				2BAFEE1427BE7FB9001473C2 /* MyPlantsViewController.swift in Sources */,
+				2BAFEE3227BEECA7001473C2 /* Plant.swift in Sources */,
 				2BAFEE2527BEB28F001473C2 /* PlantEnvironment.swift in Sources */,
 				2BE0E2F227BD958200B08269 /* CoreDataManager.swift in Sources */,
 				2B09A35227BC3A1E00C61B1E /* UIColor+Palette.swift in Sources */,
@@ -608,6 +615,7 @@
 				2BAFEE0527BE6BDE001473C2 /* ConfirmationView.swift in Sources */,
 				2BE0E2C327BD70B900B08269 /* iOSPlantManager.xcdatamodeld in Sources */,
 				2B09A34D27BC37C600C61B1E /* GreetingViewController.swift in Sources */,
+				2BAFEE3027BEEBAE001473C2 /* PlantCollectionViewCell.swift in Sources */,
 				2BE0E2C027BD486800B08269 /* UserIdentificationPresenter.swift in Sources */,
 				2B09A34A27BC370900C61B1E /* BaseViewController.swift in Sources */,
 				2BAFEE1827BE8B87001473C2 /* UserInfoView.swift in Sources */,

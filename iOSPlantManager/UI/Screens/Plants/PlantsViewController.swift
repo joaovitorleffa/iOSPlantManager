@@ -23,6 +23,7 @@ class PlantsViewController: BaseViewController<PlantsView> {
         customView.collectionView.dataSource = self
         customView.collectionView.register(UserInfoCollectionViewCell.self, forCellWithReuseIdentifier: UserInfoCollectionViewCell.identifier)
         customView.collectionView.register(PlantEnvironmentCollectionViewCell.self, forCellWithReuseIdentifier: PlantEnvironmentCollectionViewCell.indetifier)
+        customView.collectionView.register(PlantCollectionViewCell.self, forCellWithReuseIdentifier: PlantCollectionViewCell.identifier)
     }
 }
 
@@ -58,6 +59,10 @@ extension PlantsViewController: UICollectionViewDataSource {
                 cell.configure(title: environment.title, isSelected: isSelected)
                 return cell
             }
+        }
+        
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlantCollectionViewCell.identifier, for: indexPath) as? PlantCollectionViewCell {
+            return cell
         }
         
         return UICollectionViewCell()
