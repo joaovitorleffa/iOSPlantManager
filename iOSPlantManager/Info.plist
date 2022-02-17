@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Jost-Light.ttf</string>
 		<string>Jost-Regular.ttf</string>
 		<string>Jost-SemiBold.ttf</string>
 	</array>

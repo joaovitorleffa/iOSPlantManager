@@ -8,9 +8,15 @@
 import UIKit
 
 class PlantsView: UIView {
+    let collectionView: UICollectionView = {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        return $0
+    }(UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewCompositionalLayout.default()))
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .background
+        setupLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -21,10 +27,15 @@ class PlantsView: UIView {
 
 extension PlantsView: ViewCode {
     func buildViewHierarchy() {
-    
+        addSubview(collectionView)
     }
     
     func setupConstraints() {
-    
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: topAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            collectionView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            collectionView.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
     }
 }

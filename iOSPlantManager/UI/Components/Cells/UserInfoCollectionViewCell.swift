@@ -1,5 +1,5 @@
 //
-//  UserInfoView.swift
+//  UserInfoCollectionViewCell.swift
 //  iOSPlantManager
 //
 //  Created by joaovitor on 17/02/22.
@@ -7,7 +7,9 @@
 
 import UIKit
 
-class UserInfoView: UIView {
+class UserInfoCollectionViewCell: UICollectionViewCell {
+    static let identifier = "UserInfoCollectionViewCell"
+    
     let containerStackView: UIStackView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .horizontal
@@ -54,7 +56,7 @@ class UserInfoView: UIView {
     }
 }
 
-extension UserInfoView: ViewCode {
+extension UserInfoCollectionViewCell: ViewCode {
     func buildViewHierarchy() {
         addSubview(containerStackView)
         containerStackView.addArrangedSubview(greetingLabel)
@@ -71,4 +73,6 @@ extension UserInfoView: ViewCode {
             imageView.widthAnchor.constraint(equalToConstant: 56)
         ])
     }
+    
+    
 }
