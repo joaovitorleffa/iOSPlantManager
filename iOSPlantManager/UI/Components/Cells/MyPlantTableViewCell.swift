@@ -20,6 +20,7 @@ class MyPlantTableViewCell: UITableViewCell {
     
     let photoImageView: UIImageView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.contentMode = .scaleAspectFit
         return $0
     }(UIImageView())
     
@@ -65,6 +66,7 @@ class MyPlantTableViewCell: UITableViewCell {
     
     func setupView() {
         backgroundColor = .shape
+        selectionStyle = .none
     }
     
     func configure(imageUrl: String, name: String, time: String) {

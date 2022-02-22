@@ -7,18 +7,24 @@
 
 import UIKit
 
+protocol MyPlantsViewProtocol: AnyObject {
+    func reloadTable()
+}
+
 class MyPlantsViewController: BaseViewController<MyPlantsView> {
+    lazy var presenter: MyPlantsPresenterProtocol = MyPlantsPresenter(view: self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         customView.tableView.delegate = self
         customView.tableView.dataSource = self
-        
         customView.tableView.register(MyPlantTableViewCell.self, forCellReuseIdentifier: MyPlantTableViewCell.identifier)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        presenter.loadData()
         navigationController?.tabBarController?.tabBar.isHidden = false
     }
 }
@@ -68,18 +74,25 @@ extension MyPlantsViewController: UITableViewDelegate {
 // MARK: - TableView Data source
 extension MyPlantsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       20
+        presenter.numberOfRowsInSection()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MyPlantTableViewCell.identifier, for: indexPath)
         
         if let cell = cell as? MyPlantTableViewCell {
-            cell.configure(imageUrl: "", name: "Peperomia", time: "07:30")
+            let (imageUrl, name, time) = presenter.plantModel(indexPath: indexPath)
+            cell.configure(imageUrl: imageUrl, name: name, time: time)
         }
         
         return cell
     }
-    
-    
+}
+
+extension MyPlantsViewController: MyPlantsViewProtocol {
+    func reloadTable() {
+        DispatchQueue.main.async {
+            self.customView.tableView.reloadData()
+        }
+    }
 }

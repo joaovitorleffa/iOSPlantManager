@@ -8,10 +8,17 @@
 import Foundation
 import Combine
 
+typealias RequestCallback<T> = (Result<T, APIError>) -> Void
+
+protocol APIProtocol {
+    func request<T: Decodable>(_ endpoint: Endpoint, completion: @escaping RequestCallback<T>)
+}
+
 enum APIError: Error {
     case invalidResponse
     case invalidUrl
     case decodeError
+    case invalidData
 }
 
 enum Endpoint: String {
@@ -24,20 +31,28 @@ enum Endpoint: String {
     }
 }
 
-struct Requester {
-    func request<T: Decodable>(_ endpoint: Endpoint) -> AnyPublisher<T, APIError> {
-        return URLSession.shared.dataTaskPublisher(for: endpoint.url)
-            .tryMap { result in
-                guard let httpUrlResponse = result.response as? HTTPURLResponse, 200..<300 ~= httpUrlResponse.statusCode else {
-                    throw APIError.invalidResponse
-                }
-                
-                return result.data
+struct Requester: APIProtocol {
+    func request<T: Decodable>(_ endpoint: Endpoint, completion: @escaping RequestCallback<T>) {
+        URLSession.shared.dataTask(with: endpoint.url) { data, _, error in
+            guard error == nil else {
+                completion(.failure(.invalidResponse))
+                return
             }
-            .decode(type: T.self, decoder: JSONDecoder())
-            .mapError { error in
-                return APIError.decodeError
+            
+            guard let data = data else {
+                completion(.failure(.invalidData))
+                return
             }
-            .eraseToAnyPublisher()
+            
+            let decodificador = JSONDecoder()
+            
+            do {
+                let resData = try decodificador.decode(T.self, from: data)
+                completion(.success(resData))
+            } catch {
+                print(error)
+                completion(.failure(.decodeError))
+            }
+        }.resume()
     }
 }

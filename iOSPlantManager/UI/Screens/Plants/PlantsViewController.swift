@@ -19,6 +19,8 @@ class PlantsViewController: BaseViewController<PlantsView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter.fetchPlants()
+        
         customView.collectionView.delegate = self
         customView.collectionView.dataSource = self
         customView.collectionView.register(UserInfoCollectionViewCell.self, forCellWithReuseIdentifier: UserInfoCollectionViewCell.identifier)

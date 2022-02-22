@@ -29,6 +29,11 @@ struct Plant: Decodable {
     struct Frequency: Decodable {
         let times: Int
         let repeatEvery: RepeatEvery
+        
+        enum CodingKeys: String, CodingKey {
+            case times
+            case repeatEvery = "repeat_every"
+        }
     }
     
     enum RepeatEvery: String, Decodable {

@@ -20,23 +20,35 @@ protocol PlantsPresenterProtocol: AnyObject {
 class PlantsPrensenter {
     private var userManager: UserManagerProtocol
     private weak var view: PlantsViewProtocol?
-    private var environments: [PlantEnvironment] = PlantEnvironment.mock()
-    private var plants: [Plant] = Plant.mock()
     private lazy var selectedEnvironment: PlantEnvironment? = environments.first
+    private let API: APIProtocol
     
-    init(view: PlantsViewProtocol, userManager: UserManagerProtocol = UserManager()) {
+    var environments: [PlantEnvironment] = PlantEnvironment.mock()
+    var plants: [Plant] = []
+    
+    init(view: PlantsViewProtocol, API: APIProtocol = Requester(), userManager: UserManagerProtocol = UserManager()) {
         self.userManager = userManager
         self.view = view
+        self.API = API
     }
 }
 
 extension PlantsPrensenter: PlantsPresenterProtocol {
     func fetchEnvironmentsData() {
-        // TODO: buscar ambientes
+        
     }
     
     func fetchPlants() {
-        // TODO: buscar plantas
+        API.request(.plants) { [weak self] (result: Result<[Plant], APIError>) in
+            switch result {
+            case .success(let data):
+                print(data)
+                self?.plants = data
+                self?.view?.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     func userModel() -> User {
