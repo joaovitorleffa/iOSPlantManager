@@ -33,7 +33,7 @@ class PopUpConfirmationView: UIView {
 
     let imageView: UIImageView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.contentMode = .scaleAspectFit
+        $0.contentMode = .center
         return $0
     }(UIImageView())
     

@@ -52,12 +52,13 @@ extension MyPlantsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "Remover") { action, view, completion in
-            // TODO: remover planta
             var popUp: PopUpConfirmationViewController!
             
+            let (imageUrl, name, _) = self.presenter.plantModel(indexPath: indexPath)
+            
             popUp = PopUpConfirmationViewController(
-                imageUrl: "",
-                message: NSAttributedString.formatDeleteMessage(message: "Deseja mesmo deletar sua ", plantName: "Peperomia")
+                imageUrl: imageUrl,
+                message: NSAttributedString.formatDeleteMessage(message: "Deseja mesmo deletar sua ", plantName: name)
             )
             self.present(popUp, animated: true, completion: nil)
             completion(true)
