@@ -23,9 +23,14 @@ class PlantsViewController: BaseViewController<PlantsView> {
         
         customView.collectionView.delegate = self
         customView.collectionView.dataSource = self
+        
         customView.collectionView.register(UserInfoCollectionViewCell.self, forCellWithReuseIdentifier: UserInfoCollectionViewCell.identifier)
         customView.collectionView.register(PlantEnvironmentCollectionViewCell.self, forCellWithReuseIdentifier: PlantEnvironmentCollectionViewCell.indetifier)
         customView.collectionView.register(PlantCollectionViewCell.self, forCellWithReuseIdentifier: PlantCollectionViewCell.identifier)
+        
+        customView.collectionView.register(SectionHeaderView.self,
+                                           forSupplementaryViewOfKind: ElementKind.sectionHeader,
+                                           withReuseIdentifier: SectionHeaderView.identifier)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +54,18 @@ extension PlantsViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         presenter.didSelectItem(indexPath: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == ElementKind.sectionHeader, indexPath.section == 1 {
+            if let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeaderView.identifier, for: indexPath) as? SectionHeaderView {
+                headerView.configure(with: .init(text: NSMutableAttributedString.formatSectionHeaderTitle(prefix: "Em qual ambiente",
+                                                                                                          sufix: "você quer colocar a sua planta")))
+                return headerView
+            }
+            
+        }
+        return UICollectionReusableView()
     }
 }
 

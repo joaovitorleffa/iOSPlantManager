@@ -23,4 +23,18 @@ extension NSAttributedString {
         
         return mutable
     }
+    
+    static func formatSectionHeaderTitle(prefix: String, sufix: String) -> NSAttributedString {
+        let modified = NSMutableAttributedString.addWeight(prefix)
+        modified.append(NSAttributedString(string: "\n\(sufix)"))
+        return modified
+    }
+}
+
+extension NSMutableAttributedString {
+    static func addWeight(_ text: String) -> NSMutableAttributedString {
+        let attrs = [NSAttributedString.Key.font: UIFont.headingLargeSemiBold!]
+        
+        return NSMutableAttributedString(string: text, attributes: attrs)
+    }
 }

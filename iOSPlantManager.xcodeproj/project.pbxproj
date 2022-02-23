@@ -74,6 +74,7 @@
 		2BAFEE3027BEEBAE001473C2 /* PlantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE2F27BEEBAE001473C2 /* PlantCollectionViewCell.swift */; };
 		2BAFEE3227BEECA7001473C2 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE3127BEECA7001473C2 /* Plant.swift */; };
 		2BCEA81327C6733400AF4242 /* Date+Seconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCEA81227C6733400AF4242 /* Date+Seconds.swift */; };
+		2BCEA81527C6A35100AF4242 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCEA81427C6A35100AF4242 /* SectionHeaderView.swift */; };
 		2BE0E2B427BD1E1E00B08269 /* UserIdentificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B327BD1E1E00B08269 /* UserIdentificationView.swift */; };
 		2BE0E2B627BD1E6100B08269 /* UserIdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B527BD1E6100B08269 /* UserIdentificationViewController.swift */; };
 		2BE0E2BA27BD294300B08269 /* TextFieldPrimaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B927BD294300B08269 /* TextFieldPrimaryView.swift */; };
@@ -175,6 +176,7 @@
 		2BAFEE2F27BEEBAE001473C2 /* PlantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCollectionViewCell.swift; sourceTree = "<group>"; };
 		2BAFEE3127BEECA7001473C2 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		2BCEA81227C6733400AF4242 /* Date+Seconds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Seconds.swift"; sourceTree = "<group>"; };
+		2BCEA81427C6A35100AF4242 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		2BE0E2B327BD1E1E00B08269 /* UserIdentificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationView.swift; sourceTree = "<group>"; };
 		2BE0E2B527BD1E6100B08269 /* UserIdentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationViewController.swift; sourceTree = "<group>"; };
 		2BE0E2B927BD294300B08269 /* TextFieldPrimaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPrimaryView.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				2B77B3E227BE868B00800173 /* WaterTipsCard.swift */,
 				2B52346127BEE9A2008F666F /* MyPlantsSectionHeader.swift */,
 				2B266FE51C6CA8D4004C7FC8 /* PopUpConfirmationView.swift */,
+				2BCEA81427C6A35100AF4242 /* SectionHeaderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -662,6 +665,7 @@
 				2BCEA81327C6733400AF4242 /* Date+Seconds.swift in Sources */,
 				2BE0E2F227BD958200B08269 /* CoreDataManager.swift in Sources */,
 				2B09A35227BC3A1E00C61B1E /* UIColor+Palette.swift in Sources */,
+				2BCEA81527C6A35100AF4242 /* SectionHeaderView.swift in Sources */,
 				2BE0E2BA27BD294300B08269 /* TextFieldPrimaryView.swift in Sources */,
 				2BAFEE1A27BE8C33001473C2 /* NSAttributedString+Title.swift in Sources */,
 				2B266FEB1C6CEC0C004C7FC8 /* NSAttributedString+Weight.swift in Sources */,

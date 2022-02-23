@@ -10,6 +10,7 @@ import UIKit
 class PlantsView: UIView {
     let collectionView: UICollectionView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.showsVerticalScrollIndicator = false
         return $0
     }(UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewCompositionalLayout.default()))
     

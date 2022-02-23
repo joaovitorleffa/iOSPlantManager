@@ -7,6 +7,10 @@
 
 import UIKit
 
+struct ElementKind {
+    static let sectionHeader = "section-header-element-kind"
+}
+
 extension UICollectionViewCompositionalLayout {
     static func `default`() -> UICollectionViewCompositionalLayout {
         UICollectionViewCompositionalLayout { section, _ in
@@ -49,6 +53,13 @@ extension NSCollectionLayoutSection {
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
         section.contentInsets = .init(top: 0, leading: 32, bottom: 0, trailing: 0)
+        
+        let sectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(80))
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: sectionHeaderSize,
+                                                                        elementKind: ElementKind.sectionHeader,
+                                                                        alignment: .top)
+        
+        section.boundarySupplementaryItems = [sectionHeader]
         
         return section
     }
