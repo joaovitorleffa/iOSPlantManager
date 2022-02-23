@@ -31,7 +31,7 @@ extension PlantsView: ViewCode {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: topAnchor),
+            collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 32),
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             collectionView.centerXAnchor.constraint(equalTo: centerXAnchor),
             collectionView.centerYAnchor.constraint(equalTo: centerYAnchor)

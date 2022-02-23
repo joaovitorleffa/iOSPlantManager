@@ -25,6 +25,11 @@ class MyPlantsViewController: BaseViewController<MyPlantsView> {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter.loadData()
+        setupNavigation()
+    }
+    
+    func setupNavigation() {
+        navigationController?.navigationBar.isHidden = true
         navigationController?.tabBarController?.tabBar.isHidden = false
     }
 }

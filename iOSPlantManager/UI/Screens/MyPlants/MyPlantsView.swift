@@ -47,7 +47,7 @@ extension MyPlantsView: ViewCode {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            userInfoView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            userInfoView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 32),
             userInfoView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
             userInfoView.centerXAnchor.constraint(equalTo: centerXAnchor),
             userInfoView.heightAnchor.constraint(equalToConstant: 100),

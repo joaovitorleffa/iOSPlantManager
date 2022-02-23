@@ -21,9 +21,13 @@ class AddPlantViewController: BaseViewController<AddPlantView> {
         super.init()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = false
     }
     
     override func viewDidLoad() {

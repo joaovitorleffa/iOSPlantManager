@@ -35,6 +35,8 @@ class PlantsViewController: BaseViewController<PlantsView> {
     
     func setupNavigation() {
         navigationItem.backButtonTitle = ""
+        navigationController?.navigationBar.tintColor = .border
+        navigationController?.navigationBar.isHidden = true
         navigationController?.tabBarController?.tabBar.isHidden = false
     }
 }
