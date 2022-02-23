@@ -25,6 +25,7 @@ enum Endpoint: String {
     private var baseUrl: String { "http://127.0.0.1:3000" }
     
     case plants = "/plants"
+    case environments = "/plants_environments"
     
     var url: URL {
         URL(string: baseUrl + self.rawValue)!

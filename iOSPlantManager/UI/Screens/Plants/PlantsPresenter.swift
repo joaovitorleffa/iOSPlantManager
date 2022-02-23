@@ -8,8 +8,7 @@
 import Foundation
 
 protocol PlantsPresenterProtocol: AnyObject {
-    func fetchEnvironmentsData()
-    func fetchPlants()
+    func loadData()
     func userModel() -> User
     func environmentModel(indexPath: IndexPath) -> (environment: PlantEnvironment, isSelected: Bool)
     func plantModel(indexPath: IndexPath) -> Plant
@@ -20,11 +19,12 @@ protocol PlantsPresenterProtocol: AnyObject {
 class PlantsPrensenter {
     private var userManager: UserManagerProtocol
     private weak var view: PlantsViewProtocol?
-    private lazy var selectedEnvironment: PlantEnvironment? = environments.first
     private let API: APIProtocol
     
-    var environments: [PlantEnvironment] = PlantEnvironment.mock()
     var plants: [Plant] = []
+    var filteredPlants: [Plant] = []
+    var environments: [PlantEnvironment] = []
+    private lazy var selectedEnvironment: PlantEnvironment? = environments.first
     
     init(view: PlantsViewProtocol, API: APIProtocol = Requester(), userManager: UserManagerProtocol = UserManager()) {
         self.userManager = userManager
@@ -33,9 +33,24 @@ class PlantsPrensenter {
     }
 }
 
-extension PlantsPrensenter: PlantsPresenterProtocol {
+extension PlantsPrensenter {
+    func filterPlants() -> [Plant] {
+        plants.filter {
+            return $0.environments.contains { $0.rawValue == self.selectedEnvironment?.key.rawValue ?? "" }
+        }
+    }
+    
     func fetchEnvironmentsData() {
-        
+        API.request(.environments) { [weak self] (result: Result<[PlantEnvironment], APIError>) in
+            switch result {
+            case .success(let data):
+                self?.environments = data
+                self?.filteredPlants = self?.filterPlants() ?? []
+                self?.view?.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     func fetchPlants() {
@@ -43,10 +58,41 @@ extension PlantsPrensenter: PlantsPresenterProtocol {
             switch result {
             case .success(let data):
                 self?.plants = data
-                self?.view?.reloadData()
+                self?.fetchEnvironmentsData()
             case .failure(let error):
                 print(error)
             }
+        }
+    }
+}
+
+extension PlantsPrensenter: PlantsPresenterProtocol {
+    func loadData() {
+        fetchPlants()
+    }
+    
+    func numberOfItensInSection(section: Int) -> Int {
+        if section == 0 {
+            return 1
+        }
+        
+        if section == 1 {
+            return environments.count
+        }
+       
+        return filteredPlants.count
+       
+    }
+    
+    func didSelectItem(indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            selectedEnvironment = environmentModel(indexPath: indexPath).environment
+            filteredPlants = filterPlants()
+            view?.reloadData()
+        }
+        
+        if indexPath.section == 2 {
+            view?.navigate(with: plants[indexPath.row])
         }
     }
     
@@ -61,30 +107,6 @@ extension PlantsPrensenter: PlantsPresenterProtocol {
     }
     
     func plantModel(indexPath: IndexPath) -> Plant {
-        plants[indexPath.row]
-    }
-    
-    func numberOfItensInSection(section: Int) -> Int {
-        if section == 0 {
-            return 1
-        }
-        
-        if section == 1 {
-            return environments.count
-        }
-       
-        return plants.count
-       
-    }
-    
-    func didSelectItem(indexPath: IndexPath) {
-        if indexPath.section == 1 {
-            selectedEnvironment = environmentModel(indexPath: indexPath).environment
-            view?.reloadData()
-        }
-        
-        if indexPath.section == 2 {
-            view?.navigate(with: plants[indexPath.row])
-        }
+        filteredPlants[indexPath.row]
     }
 }
