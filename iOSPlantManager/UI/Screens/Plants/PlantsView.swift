@@ -11,6 +11,7 @@ class PlantsView: UIView {
     let collectionView: UICollectionView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.showsVerticalScrollIndicator = false
+        $0.backgroundColor = .background
         return $0
     }(UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewCompositionalLayout.default()))
     
