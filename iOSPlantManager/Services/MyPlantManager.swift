@@ -11,6 +11,7 @@ import CoreData
 protocol MyPlantManagerProtocol: AnyObject {
     @discardableResult func savePlant(id: Int, name: String, photo: String, dateTimeNotification: Date) -> MyPlant?
     func fetchMyPlants() -> [MyPlant]?
+    func deleteMyPlant(plant: MyPlant) -> Bool
 }
 
 class MyPlantManager {
@@ -52,5 +53,18 @@ extension MyPlantManager: MyPlantManagerProtocol {
         }
         
         return nil
+    }
+    
+    func deleteMyPlant(plant: MyPlant) -> Bool {
+        mainContext.delete(plant)
+        
+        do {
+            try mainContext.save()
+            return true
+        } catch {
+            print("Falha ao deletar planta \(error)")
+        }
+        
+        return false
     }
 }

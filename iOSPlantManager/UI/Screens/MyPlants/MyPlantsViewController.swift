@@ -52,14 +52,14 @@ extension MyPlantsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "Remover") { action, view, completion in
-            var popUp: PopUpConfirmationViewController!
-            
-            let (imageUrl, name, _) = self.presenter.plantModel(indexPath: indexPath)
-            
-            popUp = PopUpConfirmationViewController(
-                imageUrl: imageUrl,
-                message: NSAttributedString.formatDeleteMessage(message: "Deseja mesmo deletar sua ", plantName: name)
+            let plant = self.presenter.plantModel(indexPath: indexPath)
+            let popUp = PopUpConfirmationViewController(
+                imageUrl: plant.photo ?? "",
+                message: NSAttributedString.formatDeleteMessage(message: "Deseja mesmo deletar sua ", plantName: plant.name ?? ""),
+                id: Int(plant.id)
             )
+            popUp.delegate = self
+            
             self.present(popUp, animated: true, completion: nil)
             completion(true)
         }
@@ -82,11 +82,17 @@ extension MyPlantsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: MyPlantTableViewCell.identifier, for: indexPath)
         
         if let cell = cell as? MyPlantTableViewCell {
-            let (imageUrl, name, time) = presenter.plantModel(indexPath: indexPath)
-            cell.configure(imageUrl: imageUrl, name: name, time: time)
+            let plant = presenter.plantModel(indexPath: indexPath)
+            cell.configure(imageUrl: plant.photo ?? "", name: plant.name ?? "", time: plant.dateTimeNotification?.formatHHmm ?? "")
         }
         
         return cell
+    }
+}
+
+extension MyPlantsViewController: PopUpConfimationViewDelegate {
+    func onDelete(id: Int) {
+        presenter.deletePlant(id: id)
     }
 }
 

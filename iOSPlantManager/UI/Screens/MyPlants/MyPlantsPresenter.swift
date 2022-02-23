@@ -9,9 +9,9 @@ import Foundation
 
 protocol MyPlantsPresenterProtocol: AnyObject {
     func loadData()
-    func deletePlant(plant: Plant)
+    func deletePlant(id: Int)
     func numberOfRowsInSection() -> Int
-    func plantModel(indexPath: IndexPath) -> (String, String, String)
+    func plantModel(indexPath: IndexPath) -> MyPlant
 }
 
 class MyPlantsPresenter {
@@ -34,16 +34,20 @@ extension MyPlantsPresenter: MyPlantsPresenterProtocol {
         }
     }
     
-    func deletePlant(plant: Plant) {
-        // TODO: Deletar planta
+    func deletePlant(id: Int) {
+        if let plant = plants.first(where: { $0.id == id }) {
+            let isSuccess = plantManager.deleteMyPlant(plant: plant)
+            if isSuccess == true {
+                self.loadData()
+            }
+        }
     }
     
     func numberOfRowsInSection() -> Int {
         plants.count
     }
     
-    func plantModel(indexPath: IndexPath) -> (String, String, String) {
-        let plant = plants[indexPath.row]
-        return (plant.photo ?? "", plant.name ?? "", plant.dateTimeNotification?.formatHHmm ?? "")
+    func plantModel(indexPath: IndexPath) -> MyPlant {
+       plants[indexPath.row]
     }
 }

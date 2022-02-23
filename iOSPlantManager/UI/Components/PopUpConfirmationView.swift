@@ -115,13 +115,23 @@ extension PopUpConfirmationView: ViewCode {
     }
 }
 
+protocol PopUpConfimationViewDelegate: AnyObject {
+    func onDelete(id: Int)
+}
 
 class PopUpConfirmationViewController: BaseViewController<PopUpConfirmationView> {
-    init(imageUrl: String, message: NSAttributedString) {
+    weak var delegate: PopUpConfimationViewDelegate?
+    
+    private var id: Int
+    
+    init(imageUrl: String, message: NSAttributedString, id: Int) {
+        self.id = id
+        
         super.init()
+        
         customView.imageView.loadImage(from: imageUrl)
         customView.messageLabel.attributedText = message
-        customView.deleteBtn.addTarget(self, action: #selector(onCancel), for: .touchUpInside)
+        customView.deleteBtn.addTarget(self, action: #selector(onDelete), for: .touchUpInside)
         customView.cancelBtn.addTarget(self, action: #selector(onCancel), for: .touchUpInside)
     }
 
@@ -131,6 +141,12 @@ class PopUpConfirmationViewController: BaseViewController<PopUpConfirmationView>
     
     @objc
     func onCancel() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc
+    func onDelete() {
+        delegate?.onDelete(id: id)
         self.dismiss(animated: true, completion: nil)
     }
 }
