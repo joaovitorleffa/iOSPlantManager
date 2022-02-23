@@ -15,6 +15,7 @@ class MyPlantTableViewCell: UITableViewCell {
         $0.axis = .horizontal
         $0.alignment = .center
         $0.distribution = .fill
+        $0.spacing = 24
         return $0
     }(UIStackView())
     
