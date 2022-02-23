@@ -73,6 +73,7 @@
 		2BAFEE2E27BEDDA4001473C2 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE2D27BEDDA4001473C2 /* MockedData.swift */; };
 		2BAFEE3027BEEBAE001473C2 /* PlantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE2F27BEEBAE001473C2 /* PlantCollectionViewCell.swift */; };
 		2BAFEE3227BEECA7001473C2 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE3127BEECA7001473C2 /* Plant.swift */; };
+		2BCEA81327C6733400AF4242 /* Date+Seconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCEA81227C6733400AF4242 /* Date+Seconds.swift */; };
 		2BE0E2B427BD1E1E00B08269 /* UserIdentificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B327BD1E1E00B08269 /* UserIdentificationView.swift */; };
 		2BE0E2B627BD1E6100B08269 /* UserIdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B527BD1E6100B08269 /* UserIdentificationViewController.swift */; };
 		2BE0E2BA27BD294300B08269 /* TextFieldPrimaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B927BD294300B08269 /* TextFieldPrimaryView.swift */; };
@@ -173,6 +174,7 @@
 		2BAFEE2D27BEDDA4001473C2 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
 		2BAFEE2F27BEEBAE001473C2 /* PlantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCollectionViewCell.swift; sourceTree = "<group>"; };
 		2BAFEE3127BEECA7001473C2 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		2BCEA81227C6733400AF4242 /* Date+Seconds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Seconds.swift"; sourceTree = "<group>"; };
 		2BE0E2B327BD1E1E00B08269 /* UserIdentificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationView.swift; sourceTree = "<group>"; };
 		2BE0E2B527BD1E6100B08269 /* UserIdentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationViewController.swift; sourceTree = "<group>"; };
 		2BE0E2B927BD294300B08269 /* TextFieldPrimaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPrimaryView.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				2BAFEE1E27BE8FB1001473C2 /* UIImageView+loadImage.swift */,
 				2BAFEE2627BEBD48001473C2 /* UICollectionViewCompositionalLayout+Layouts.swift */,
 				2B266FEE1C6CFCA5004C7FC8 /* Date+Format.swift */,
+				2BCEA81227C6733400AF4242 /* Date+Seconds.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				2BAFEE1427BE7FB9001473C2 /* MyPlantsViewController.swift in Sources */,
 				2BAFEE3227BEECA7001473C2 /* Plant.swift in Sources */,
 				2BAFEE2527BEB28F001473C2 /* PlantEnvironment.swift in Sources */,
+				2BCEA81327C6733400AF4242 /* Date+Seconds.swift in Sources */,
 				2BE0E2F227BD958200B08269 /* CoreDataManager.swift in Sources */,
 				2B09A35227BC3A1E00C61B1E /* UIColor+Palette.swift in Sources */,
 				2BE0E2BA27BD294300B08269 /* TextFieldPrimaryView.swift in Sources */,

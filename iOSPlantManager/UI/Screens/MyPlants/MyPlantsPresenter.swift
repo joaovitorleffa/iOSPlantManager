@@ -29,7 +29,7 @@ class MyPlantsPresenter {
 extension MyPlantsPresenter: MyPlantsPresenterProtocol {
     func loadData() {
         if let myPlants = plantManager.fetchMyPlants() {
-            plants = myPlants
+            plants = myPlants.sorted { $0.dateTimeNotification!.compare($1.dateTimeNotification!) == .orderedAscending }
             view?.reloadTable()
         }
     }

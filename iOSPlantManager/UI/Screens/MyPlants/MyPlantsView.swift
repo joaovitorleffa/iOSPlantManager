@@ -14,12 +14,6 @@ class MyPlantsView: UIView {
         return $0
     }(UserInfoView())
     
-    let waterTipsCard: WaterTipsCard = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.configure(with: .init(text: "Regue sua Peperomia daqui a 2 horas"))
-        return $0
-    }(WaterTipsCard())
-    
     let tableView: UITableView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.bounces = false
@@ -41,7 +35,6 @@ class MyPlantsView: UIView {
 extension MyPlantsView: ViewCode {
     func buildViewHierarchy() {
         addSubview(userInfoView)
-        addSubview(waterTipsCard)
         addSubview(tableView)
     }
     
@@ -50,14 +43,10 @@ extension MyPlantsView: ViewCode {
             userInfoView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 32),
             userInfoView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
             userInfoView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            userInfoView.heightAnchor.constraint(equalToConstant: 100),
-            
-            waterTipsCard.topAnchor.constraint(equalTo: userInfoView.bottomAnchor),
-            waterTipsCard.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-            waterTipsCard.centerXAnchor.constraint(equalTo: centerXAnchor),
+            userInfoView.heightAnchor.constraint(equalToConstant: 60),
             
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            tableView.topAnchor.constraint(equalTo: waterTipsCard.bottomAnchor),
+            tableView.topAnchor.constraint(equalTo: userInfoView.bottomAnchor),
             tableView.centerXAnchor.constraint(equalTo: centerXAnchor),
             tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])

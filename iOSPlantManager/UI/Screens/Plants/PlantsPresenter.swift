@@ -42,7 +42,6 @@ extension PlantsPrensenter: PlantsPresenterProtocol {
         API.request(.plants) { [weak self] (result: Result<[Plant], APIError>) in
             switch result {
             case .success(let data):
-                print(data)
                 self?.plants = data
                 self?.view?.reloadData()
             case .failure(let error):

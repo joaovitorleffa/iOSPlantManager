@@ -23,6 +23,11 @@ class AddPlantViewController: BaseViewController<AddPlantView> {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        let seconds = Date().seconds
+        customView.timePicker.countDownDuration = Double(seconds)
+        presenter.didChangeSelectedDate(customView.timePicker.date)
+        customView.timePicker.addTarget(self, action: #selector(onChangeTime), for: .valueChanged)
+        customView.addButton.addTarget(self, action: #selector(onSavePlant), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,12 +39,11 @@ class AddPlantViewController: BaseViewController<AddPlantView> {
         super.viewDidLoad()
         navigationController?.tabBarController?.tabBar.isHidden = true
         customView.configure(name: plant.name, description: plant.about, imageUrl: plant.photo, waterTips: plant.waterTips)
-        customView.timePicker.addTarget(self, action: #selector(onChangeTime), for: .valueChanged)
-        customView.addButton.addTarget(self, action: #selector(onSavePlant), for: .touchUpInside)
     }
 
     @objc
     func onChangeTime(sender: UIDatePicker) {
+        print(sender.date)
         presenter.didChangeSelectedDate(sender.date)
     }
     

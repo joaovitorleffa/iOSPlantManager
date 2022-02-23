@@ -74,6 +74,8 @@ class AddPlantView: UIView {
     let timePicker: UIDatePicker = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.datePickerMode = .countDownTimer
+        $0.minuteInterval = 15
+        $0.timeZone = TimeZone(secondsFromGMT: 0)
         return $0
     }(UIDatePicker())
     
