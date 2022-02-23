@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Plant: Decodable {
+struct Plant: Decodable, Equatable {
     let id: Int
     let name: String
     let about: String
@@ -16,7 +16,7 @@ struct Plant: Decodable {
     let environments: [PlantEnvironmentKey]
     let frequency: Frequency
     
-    enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey, Equatable {
         case id
         case name
         case about
@@ -26,7 +26,7 @@ struct Plant: Decodable {
         case frequency
     }
     
-    struct Frequency: Decodable {
+    struct Frequency: Decodable, Equatable {
         let times: Int
         let repeatEvery: RepeatEvery
         
@@ -36,7 +36,7 @@ struct Plant: Decodable {
         }
     }
     
-    enum RepeatEvery: String, Decodable {
+    enum RepeatEvery: String, Decodable, Equatable {
         case week
         case day
     }

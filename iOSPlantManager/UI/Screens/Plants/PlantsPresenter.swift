@@ -24,7 +24,7 @@ class PlantsPrensenter {
     var plants: [Plant] = []
     var filteredPlants: [Plant] = []
     var environments: [PlantEnvironment] = []
-    private lazy var selectedEnvironment: PlantEnvironment? = environments.first
+    lazy var selectedEnvironment: PlantEnvironment? = environments.first
     
     init(view: PlantsViewProtocol, API: APIProtocol = Requester(), userManager: UserManagerProtocol = UserManager()) {
         self.userManager = userManager

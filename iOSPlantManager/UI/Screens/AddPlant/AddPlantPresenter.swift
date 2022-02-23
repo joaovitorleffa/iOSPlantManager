@@ -13,7 +13,7 @@ protocol AddPlantPresenterProtocol: AnyObject {
 }
 
 class AddPlantPresenter {
-    private var selectedDate: Date = Date()
+    var selectedDate: Date = Date()
     private var myPlantManager: MyPlantManagerProtocol
     private weak var view: AddPlantViewProtocol?
     

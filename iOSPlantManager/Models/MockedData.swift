@@ -25,11 +25,23 @@ extension PlantEnvironment {
 }
 
 extension Plant {
+    static func plantLivingRoomMock() -> Plant {
+        Plant(id: 1, name: "Aningapara", about: "É uma espécie tropical que tem crescimento rápido e fácil manuseio.", waterTips: "Mantenha a terra sempre húmida sem encharcar. Regue 2 vezes na semana.", photo: "https://drive.google.com/uc?id=1-JWlKTOZq4o2v--bhVfu8fyeFPTY07VK", environments: [.living_room], frequency: .init(times: 2, repeatEvery: .week))
+    }
+    
+    static func plantBedroomMock() -> Plant {
+        Plant(id: 2, name: "Aningapara", about: "É uma espécie tropical que tem crescimento rápido e fácil manuseio.", waterTips: "Mantenha a terra sempre húmida sem encharcar. Regue 2 vezes na semana.", photo: "https://drive.google.com/uc?id=1NszcbOD9mrx1LND6tcKWpMM6TBaTOy2O", environments: [.bedroom], frequency: .init(times: 2, repeatEvery: .week))
+    }
+    
+    static func plantBalconyMock() -> Plant {
+        Plant(id: 3, name: "Aningapara", about: "É uma espécie tropical que tem crescimento rápido e fácil manuseio.", waterTips: "Mantenha a terra sempre húmida sem encharcar. Regue 2 vezes na semana.", photo: "https://storage.cloud.google.com/plantmanager/1.png", environments: [.balcony], frequency: .init(times: 2, repeatEvery: .week))
+    }
+    
     static func mock() -> [Plant] {
         [
-            Plant(id: 1, name: "Aningapara", about: "É uma espécie tropical que tem crescimento rápido e fácil manuseio.", waterTips: "Mantenha a terra sempre húmida sem encharcar. Regue 2 vezes na semana.", photo: "https://drive.google.com/uc?id=1-JWlKTOZq4o2v--bhVfu8fyeFPTY07VK", environments: [.living_room], frequency: .init(times: 2, repeatEvery: .week)),
-            Plant(id: 2, name: "Aningapara", about: "É uma espécie tropical que tem crescimento rápido e fácil manuseio.", waterTips: "Mantenha a terra sempre húmida sem encharcar. Regue 2 vezes na semana.", photo: "https://drive.google.com/uc?id=1NszcbOD9mrx1LND6tcKWpMM6TBaTOy2O", environments: [.living_room], frequency: .init(times: 2, repeatEvery: .week)),
-            Plant(id: 3, name: "Aningapara", about: "É uma espécie tropical que tem crescimento rápido e fácil manuseio.", waterTips: "Mantenha a terra sempre húmida sem encharcar. Regue 2 vezes na semana.", photo: "https://storage.cloud.google.com/plantmanager/1.png", environments: [.living_room], frequency: .init(times: 2, repeatEvery: .week))
+            Plant.plantLivingRoomMock(),
+            Plant.plantBedroomMock(),
+            Plant.plantBalconyMock()
         ]
     }
 }

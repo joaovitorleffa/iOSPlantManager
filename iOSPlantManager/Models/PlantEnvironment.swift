@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct PlantEnvironment: Decodable {
+struct PlantEnvironment: Decodable, Equatable {
     let key: PlantEnvironmentKey
     let title: String
 }
 
-enum PlantEnvironmentKey: String, Decodable {
+enum PlantEnvironmentKey: String, Decodable, Equatable {
     case living_room
     case bedroom
     case kitchen

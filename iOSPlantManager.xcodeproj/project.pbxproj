@@ -75,6 +75,13 @@
 		2BAFEE3227BEECA7001473C2 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE3127BEECA7001473C2 /* Plant.swift */; };
 		2BCEA81327C6733400AF4242 /* Date+Seconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCEA81227C6733400AF4242 /* Date+Seconds.swift */; };
 		2BCEA81527C6A35100AF4242 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCEA81427C6A35100AF4242 /* SectionHeaderView.swift */; };
+		2BCEA81727C6B23D00AF4242 /* RequesterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCEA81627C6B23D00AF4242 /* RequesterMock.swift */; };
+		2BCEA81927C6B33B00AF4242 /* PlantsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCEA81827C6B33B00AF4242 /* PlantsPresenterTests.swift */; };
+		2BCEA81B27C6B36500AF4242 /* PlantsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCEA81A27C6B36500AF4242 /* PlantsViewMock.swift */; };
+		2BCEA81D27C6C29D00AF4242 /* AddPlantViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCEA81C27C6C29D00AF4242 /* AddPlantViewMock.swift */; };
+		2BCEA81F27C6C2ED00AF4242 /* AddPlantPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCEA81E27C6C2ED00AF4242 /* AddPlantPresenterTests.swift */; };
+		2BCEA82127C6C77400AF4242 /* MyPlantsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCEA82027C6C77400AF4242 /* MyPlantsViewMock.swift */; };
+		2BCEA82327C6C7C100AF4242 /* MyPlantsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCEA82227C6C7C100AF4242 /* MyPlantsPresenterTests.swift */; };
 		2BE0E2B427BD1E1E00B08269 /* UserIdentificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B327BD1E1E00B08269 /* UserIdentificationView.swift */; };
 		2BE0E2B627BD1E6100B08269 /* UserIdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B527BD1E6100B08269 /* UserIdentificationViewController.swift */; };
 		2BE0E2BA27BD294300B08269 /* TextFieldPrimaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2B927BD294300B08269 /* TextFieldPrimaryView.swift */; };
@@ -177,6 +184,13 @@
 		2BAFEE3127BEECA7001473C2 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		2BCEA81227C6733400AF4242 /* Date+Seconds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Seconds.swift"; sourceTree = "<group>"; };
 		2BCEA81427C6A35100AF4242 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		2BCEA81627C6B23D00AF4242 /* RequesterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequesterMock.swift; sourceTree = "<group>"; };
+		2BCEA81827C6B33B00AF4242 /* PlantsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsPresenterTests.swift; sourceTree = "<group>"; };
+		2BCEA81A27C6B36500AF4242 /* PlantsViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsViewMock.swift; sourceTree = "<group>"; };
+		2BCEA81C27C6C29D00AF4242 /* AddPlantViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewMock.swift; sourceTree = "<group>"; };
+		2BCEA81E27C6C2ED00AF4242 /* AddPlantPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantPresenterTests.swift; sourceTree = "<group>"; };
+		2BCEA82027C6C77400AF4242 /* MyPlantsViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsViewMock.swift; sourceTree = "<group>"; };
+		2BCEA82227C6C7C100AF4242 /* MyPlantsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsPresenterTests.swift; sourceTree = "<group>"; };
 		2BE0E2B327BD1E1E00B08269 /* UserIdentificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationView.swift; sourceTree = "<group>"; };
 		2BE0E2B527BD1E6100B08269 /* UserIdentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationViewController.swift; sourceTree = "<group>"; };
 		2BE0E2B927BD294300B08269 /* TextFieldPrimaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPrimaryView.swift; sourceTree = "<group>"; };
@@ -263,6 +277,9 @@
 				2B09A32B27BC350C00C61B1E /* iOSPlantManagerTests.swift */,
 				2BE0E2F527BD9A9600B08269 /* UserIdentificationPresenterTests.swift */,
 				2BAFEE2227BEAB4A001473C2 /* GreetingPresenterTests.swift */,
+				2BCEA81827C6B33B00AF4242 /* PlantsPresenterTests.swift */,
+				2BCEA81E27C6C2ED00AF4242 /* AddPlantPresenterTests.swift */,
+				2BCEA82227C6C7C100AF4242 /* MyPlantsPresenterTests.swift */,
 			);
 			path = iOSPlantManagerTests;
 			sourceTree = "<group>";
@@ -494,7 +511,11 @@
 			isa = PBXGroup;
 			children = (
 				2BE0E2F327BD970000B08269 /* CoreDataTestStack.swift */,
+				2BCEA81627C6B23D00AF4242 /* RequesterMock.swift */,
 				2BE0E2F827BD9C0000B08269 /* UserIdentificationViewMock.swift */,
+				2BCEA81A27C6B36500AF4242 /* PlantsViewMock.swift */,
+				2BCEA81C27C6C29D00AF4242 /* AddPlantViewMock.swift */,
+				2BCEA82027C6C77400AF4242 /* MyPlantsViewMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -714,8 +735,15 @@
 			files = (
 				2B09A32C27BC350C00C61B1E /* iOSPlantManagerTests.swift in Sources */,
 				2BE0E2F927BD9C0000B08269 /* UserIdentificationViewMock.swift in Sources */,
+				2BCEA81727C6B23D00AF4242 /* RequesterMock.swift in Sources */,
 				2BE0E2F627BD9A9600B08269 /* UserIdentificationPresenterTests.swift in Sources */,
+				2BCEA81F27C6C2ED00AF4242 /* AddPlantPresenterTests.swift in Sources */,
 				2BAFEE2327BEAB4A001473C2 /* GreetingPresenterTests.swift in Sources */,
+				2BCEA82327C6C7C100AF4242 /* MyPlantsPresenterTests.swift in Sources */,
+				2BCEA81927C6B33B00AF4242 /* PlantsPresenterTests.swift in Sources */,
+				2BCEA81D27C6C29D00AF4242 /* AddPlantViewMock.swift in Sources */,
+				2BCEA81B27C6B36500AF4242 /* PlantsViewMock.swift in Sources */,
+				2BCEA82127C6C77400AF4242 /* MyPlantsViewMock.swift in Sources */,
 				2BAFEE0227BE6B0D001473C2 /* CoreDataTestStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

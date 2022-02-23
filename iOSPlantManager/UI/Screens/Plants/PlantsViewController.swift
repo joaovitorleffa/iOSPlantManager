@@ -10,7 +10,7 @@ import UIKit
 
 protocol PlantsViewProtocol: AnyObject {
     func reloadData()
-    func navigate(with: Plant)
+    func navigate(with plant: Plant)
 }
 
 class PlantsViewController: BaseViewController<PlantsView> {
