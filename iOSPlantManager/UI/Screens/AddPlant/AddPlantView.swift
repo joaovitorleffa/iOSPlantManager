@@ -6,23 +6,21 @@
 //
 
 import UIKit
+import SnapKit
 
 class AddPlantView: UIView {
     let containerStackView: UIStackView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .vertical
         $0.distribution = .equalSpacing
         return $0
     }(UIStackView())
     
     let imageView: UIImageView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.contentMode = .scaleAspectFit
         return $0
     }(UIImageView())
     
     let headingStackView: UIStackView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .vertical
         $0.distribution = .fill
         $0.spacing = 24
@@ -30,7 +28,6 @@ class AddPlantView: UIView {
     }(UIStackView())
     
     let titleLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.font = .title
         $0.textAlignment = .center
         $0.textColor = .heading
@@ -39,7 +36,6 @@ class AddPlantView: UIView {
     }(UILabel())
     
     let descriptionLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.font = .headingLarge
         $0.textColor = .body
         $0.textAlignment = .center
@@ -49,12 +45,10 @@ class AddPlantView: UIView {
     }(UILabel())
     
     let waterTipsCard: WaterTipsCard = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(WaterTipsCard())
     
     let timerWrapperStackView: UIStackView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .vertical
         $0.distribution = .fill
         $0.alignment = .center
@@ -63,7 +57,6 @@ class AddPlantView: UIView {
     }(UIStackView())
     
     let timerInfoLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.font = .headingSmall
         $0.textColor = .body
         $0.textAlignment = .center
@@ -72,7 +65,6 @@ class AddPlantView: UIView {
     }(UILabel())
     
     let timePicker: UIDatePicker = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.datePickerMode = .countDownTimer
         $0.minuteInterval = 15
         $0.timeZone = TimeZone(secondsFromGMT: 0)
@@ -80,7 +72,6 @@ class AddPlantView: UIView {
     }(UIDatePicker())
     
     let addButton: ButtonPrimary = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.configure(with: .init(text: "Cadastrar Planta"))
         return $0
     }(ButtonPrimary())
@@ -119,15 +110,16 @@ extension AddPlantView: ViewCode {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            containerStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-            containerStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            containerStackView.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
-            timePicker.heightAnchor.constraint(equalToConstant: 120),
-            imageView.heightAnchor.constraint(equalToConstant: 176)
-        ])
+        containerStackView.snp.makeConstraints { make in
+            make.top.centerY.equalTo(safeAreaLayoutGuide)
+            make.leading.equalToSuperview().offset(32)
+            make.centerX.equalToSuperview()
+        }
+        timePicker.snp.makeConstraints { make in
+            make.height.equalTo(120)
+        }
+        imageView.snp.makeConstraints { make in
+            make.height.equalTo(176)
+        }
     }
-    
-    
 }

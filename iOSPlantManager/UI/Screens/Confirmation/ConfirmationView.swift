@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 struct ConfirmationViewModel {
     let emoji: String
@@ -16,7 +17,6 @@ struct ConfirmationViewModel {
 
 class ConfirmationView: UIView {
     let containerStackView: UIStackView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .vertical
         $0.spacing = 40
         $0.alignment = .fill
@@ -25,7 +25,6 @@ class ConfirmationView: UIView {
     }(UIStackView())
     
     let wrapperStackView: UIStackView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .vertical
         $0.alignment = .fill
         $0.distribution = .fill
@@ -34,14 +33,12 @@ class ConfirmationView: UIView {
     }(UIStackView())
     
     let emojiLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.font = .systemFont(ofSize: 64)
         $0.textAlignment = .center
         return $0
     }(UILabel())
     
     let titleLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.font = .title
         $0.textColor = .heading
         $0.textAlignment = .center
@@ -49,7 +46,6 @@ class ConfirmationView: UIView {
     }(UILabel())
     
     let descriptionLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.font = .headingLarge
         $0.textColor = .body
         $0.textAlignment = .center
@@ -58,7 +54,6 @@ class ConfirmationView: UIView {
     }(UILabel())
     
     let startButton: ButtonPrimary = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(ButtonPrimary())
     
@@ -93,10 +88,9 @@ extension ConfirmationView: ViewCode {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-            containerStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            containerStackView.centerYAnchor.constraint(equalTo: centerYAnchor)
-        ])
+        containerStackView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.leading.equalToSuperview().offset(32)
+        }
     }
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import SnapKit
 
 struct AnimationInfo {
     enum NotificationKind {
@@ -67,12 +68,11 @@ class ViewWithKeyboard: UIView {
         
         addLayoutGuide(customKeyboardLayoutGuide)
         
-        NSLayoutConstraint.activate([
-            customKeyboardLayoutGuide.leadingAnchor.constraint(equalTo: leadingAnchor),
-            customKeyboardLayoutGuide.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-            customKeyboardLayoutGuide.trailingAnchor.constraint(equalTo: trailingAnchor),
-            customKeyboardLayoutGuide.heightAnchor.constraint(equalToConstant: 0)
-        ])
+        customKeyboardLayoutGuide.snp.makeConstraints { make in
+            make.leading.bottom.equalToSuperview()
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
+            make.height.equalTo(0)
+        }
     }
     
     required init?(coder: NSCoder) {

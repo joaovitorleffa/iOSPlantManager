@@ -6,15 +6,14 @@
 //
 
 import UIKit
+import SnapKit
 
 class UserIdentificationView: ViewWithKeyboard {
     let containerView: UIView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UIView())
     
     let contentStackView: UIStackView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .vertical
         $0.alignment = .fill
         $0.distribution = .fill
@@ -93,16 +92,13 @@ extension UserIdentificationView: ViewCode {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: topAnchor),
-            containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            containerView.bottomAnchor.constraint(equalTo: customKeyboardLayoutGuide.topAnchor),
-        
-            contentStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 72),
-            contentStackView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            contentStackView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
-            
-        ])
+        containerView.snp.makeConstraints { make in
+            make.top.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(customKeyboardLayoutGuide.snp.top)
+        }
+        contentStackView.snp.makeConstraints { make in
+            make.center.equalTo(containerView)
+            make.leading.equalTo(containerView).offset(72)
+        }
     }
 }
