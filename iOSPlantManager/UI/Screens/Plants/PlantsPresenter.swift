@@ -8,7 +8,7 @@
 import Foundation
 
 protocol PlantsPresenterProtocol: AnyObject {
-    func loadData()
+    func viewDidLoaded()
     func userModel() -> User
     func environmentModel(indexPath: IndexPath) -> (environment: PlantEnvironment, isSelected: Bool)
     func plantModel(indexPath: IndexPath) -> Plant
@@ -67,7 +67,7 @@ extension PlantsPrensenter {
 }
 
 extension PlantsPrensenter: PlantsPresenterProtocol {
-    func loadData() {
+    func viewDidLoaded() {
         fetchPlants()
     }
     

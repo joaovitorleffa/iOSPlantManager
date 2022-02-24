@@ -19,7 +19,7 @@ class PlantsViewController: BaseViewController<PlantsView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter.loadData()
+        presenter.viewDidLoaded()
         
         customView.collectionView.delegate = self
         customView.collectionView.dataSource = self

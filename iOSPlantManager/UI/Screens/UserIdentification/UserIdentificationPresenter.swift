@@ -9,14 +9,14 @@ import Foundation
 
 protocol UserIdentificationPresenterProtocol: AnyObject {
     func onChangeName(text: String)
-    func saveName() -> Bool
+    func saveName()
 }
 
 class UserIdentificationPresenter {
     private var userManager: UserManagerProtocol
     private weak var view: UserIdentificationViewProtocol?
     
-    private var name: String = ""
+    private(set) var name: String = ""
     
     init(view: UserIdentificationViewProtocol, userManager: UserManagerProtocol = UserManager()) {
         self.view = view
@@ -30,8 +30,8 @@ extension UserIdentificationPresenter: UserIdentificationPresenterProtocol {
         view?.updateScreen(isFilled: name.count >= 5)
     }
     
-    func saveName() -> Bool {
+    func saveName() {
         let user = userManager.createUser(name: name, profileImageUrl: "")
-        return user != nil
+        if user != nil { view?.navigateToConfimation() }
     }
 }

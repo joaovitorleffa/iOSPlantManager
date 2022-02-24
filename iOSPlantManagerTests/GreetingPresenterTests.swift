@@ -13,25 +13,27 @@ class GreetingPresenterTests: XCTestCase {
     var userManager: UserManagerProtocol!
     var coreDataStack: CoreDataTestStack!
     var presenter: GreetingPresenterProtocol!
+    var view: GreetingViewMock!
     
     override func setUp() {
         super.setUp()
         coreDataStack = CoreDataTestStack()
+        view = GreetingViewMock()
         userManager = UserManager(mainContext: coreDataStack.mainContext)
-        presenter = GreetingPresenter(userManager: userManager)
+        presenter = GreetingPresenter(view: view, userManager: userManager)
     }
-
-    func test_hasUser_shouldBeReturnTrue() {
+    
+    func test_viewDidLoaded_shouldCallViewControllerFunc() {
         userManager.createUser(name: "João", profileImageUrl: "")
         
-        let hasUserData = presenter.hasUserData()
-    
-        XCTAssertTrue(hasUserData)
+        presenter.viewDidLoaded()
+        
+        XCTAssertTrue(view.navigateToTabIsCaled)
     }
     
-    func test_hasUser_shouldBeReturnFalse() {
-        let hasUserData = presenter.hasUserData()
+    func test_viewDidLoaded_shouldDontAnything() {
+        presenter.viewDidLoaded()
         
-        XCTAssertFalse(hasUserData)
+        XCTAssertFalse(view.navigateToTabIsCaled)
     }
 }

@@ -7,27 +7,34 @@
 
 import UIKit
 
+protocol GreetingViewProtocol: AnyObject {
+    func navigateToTab()
+}
+
 class GreetingViewController: BaseViewController<GreetingView> {
-    var presenter: GreetingPresenterProtocol = GreetingPresenter()
+    lazy var presenter: GreetingPresenterProtocol = GreetingPresenter(view: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = true
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        presenter.viewDidLoaded()
+        setupNavigationController()
         
-        handleNavigation()
         customView.nextButton.addTarget(self, action: #selector(onTapNextButton), for: .touchUpInside)
     }
     
-    @objc
-    private func onTapNextButton() {
-        navigationController?.pushViewController(UserIdentificationViewController(), animated: true)
+    func setupNavigationController() {
+        navigationController?.navigationBar.isHidden = true
     }
     
-    private func handleNavigation() {
-        if presenter.hasUserData() {
-            navigationController?.pushViewController(TabBarViewController(), animated: false)
-        }
+    @objc
+    func onTapNextButton() {
+        navigationController?.pushViewController(UserIdentificationViewController(), animated: true)
+    }
+}
+
+extension GreetingViewController: GreetingViewProtocol {
+    func navigateToTab() {
+        navigationController?.pushViewController(TabBarViewController(), animated: false)
     }
 }
 

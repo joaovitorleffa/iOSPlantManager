@@ -8,19 +8,21 @@
 import Foundation
 
 protocol GreetingPresenterProtocol: AnyObject {
-    func hasUserData() -> Bool
+    func viewDidLoaded()
 }
 
 class GreetingPresenter {
     private var userManager: UserManagerProtocol
+    private weak var view: GreetingViewProtocol?
     
-    init(userManager: UserManagerProtocol = UserManager()) {
+    init(view: GreetingViewProtocol, userManager: UserManagerProtocol = UserManager()) {
         self.userManager = userManager
+        self.view = view
     }
 }
 
 extension GreetingPresenter: GreetingPresenterProtocol {
-    func hasUserData() -> Bool {
-        userManager.fetchUser() != nil
+    func viewDidLoaded() {
+        if userManager.fetchUser() != nil { view?.navigateToTab()  }
     }
 }

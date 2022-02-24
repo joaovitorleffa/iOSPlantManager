@@ -21,11 +21,11 @@ extension PlantEnvironment {
 
 extension Plant {
     static func plantLivingRoomMock() -> Plant {
-        Plant(id: 1, name: "Aningapara", about: "É uma espécie tropical que tem crescimento rápido e fácil manuseio.", waterTips: "Mantenha a terra sempre húmida sem encharcar. Regue 2 vezes na semana.", photo: "https://drive.google.com/uc?id=1t87KiCV_Cv1rhYmmi6b0GkTu5SQDGqDF", environments: [.living_room, .kitchen], frequency: .init(times: 2, repeatEvery: .week))
+        Plant(id: 1, name: "Aningapara", about: "É uma espécie tropical que tem crescimento rápido e fácil manuseio.", waterTips: "Mantenha a terra sempre húmida sem encharcar. Regue 2 vezes na semana.", photo: "https://drive.google.com/uc?id=1t87KiCV_Cv1rhYmmi6b0GkTu5SQDGqDF", environments: [.living_room], frequency: .init(times: 2, repeatEvery: .week))
     }
     
     static func plantBedroomMock() -> Plant {
-        Plant(id: 2, name: "Zamioculca", about: "Apesar de florescer na primavera, fica o ano todo bonita e verdinha.", waterTips: "Utilize vasos com furos e pedras no fundo para facilitar a drenagem. Regue 1 vez no dia.", photo: "https://drive.google.com/uc?id=1QhAhAgkguB8_9JYsGsTAKeEVjOYbOLKi", environments: [.bedroom, .living_room], frequency: .init(times: 1, repeatEvery: .day))
+        Plant(id: 2, name: "Zamioculca", about: "Apesar de florescer na primavera, fica o ano todo bonita e verdinha.", waterTips: "Utilize vasos com furos e pedras no fundo para facilitar a drenagem. Regue 1 vez no dia.", photo: "https://drive.google.com/uc?id=1QhAhAgkguB8_9JYsGsTAKeEVjOYbOLKi", environments: [.bedroom], frequency: .init(times: 1, repeatEvery: .day))
     }
     
     static func plantBalconyMock() -> Plant {
