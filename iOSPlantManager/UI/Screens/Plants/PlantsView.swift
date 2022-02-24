@@ -6,10 +6,10 @@
 //
 
 import UIKit
+import SnapKit
 
 class PlantsView: UIView {
     let collectionView: UICollectionView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.showsVerticalScrollIndicator = false
         $0.backgroundColor = .background
         return $0
@@ -32,11 +32,9 @@ extension PlantsView: ViewCode {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 32),
-            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            collectionView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            collectionView.centerYAnchor.constraint(equalTo: centerYAnchor)
-        ])
+        collectionView.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide).offset(32)
+            make.leading.centerX.centerY.equalToSuperview()
+        }
     }
 }

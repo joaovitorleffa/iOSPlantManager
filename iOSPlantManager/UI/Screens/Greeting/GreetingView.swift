@@ -6,10 +6,10 @@
 //
 
 import UIKit
+import SnapKit
 
 class GreetingView: UIView {
     let contentStackView: UIStackView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .vertical
         $0.alignment = .center
         $0.distribution = .equalSpacing
@@ -17,7 +17,6 @@ class GreetingView: UIView {
     }(UIStackView())
     
     let titleLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.font = .titleLarge
         $0.textColor = .heading
         $0.numberOfLines = 0
@@ -42,7 +41,6 @@ class GreetingView: UIView {
     }(UILabel())
     
     let nextButton: UIButton = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.layer.cornerRadius = 16
         $0.tintColor = .white
         $0.backgroundColor = .green
@@ -75,14 +73,13 @@ extension GreetingView: ViewCode {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            contentStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 24),
-            contentStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 42),
-            contentStackView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-            contentStackView.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
-            
-            nextButton.widthAnchor.constraint(equalToConstant: 56),
-            nextButton.heightAnchor.constraint(equalToConstant: 56)
-        ])
+        contentStackView.snp.makeConstraints { make in
+            make.leading.equalTo(safeAreaLayoutGuide).offset(42)
+            make.top.equalTo(safeAreaLayoutGuide).offset(24)
+            make.center.equalTo(safeAreaLayoutGuide)
+        }
+        nextButton.snp.makeConstraints { make in
+            make.size.equalTo(56)
+        }
     }
 }

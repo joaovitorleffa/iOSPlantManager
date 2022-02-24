@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 struct WaterTipsCardModel {
     let text: String
@@ -13,7 +14,6 @@ struct WaterTipsCardModel {
 
 class WaterTipsCard: UIView {
     let imageView: UIImageView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.image = UIImage(systemName: "drop.fill")
         $0.tintColor = .blue
         $0.contentMode = .scaleAspectFit
@@ -21,7 +21,6 @@ class WaterTipsCard: UIView {
     }(UIImageView())
     
     let textLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.font = .heading
         $0.textColor = .blue
         $0.numberOfLines = 3
@@ -58,17 +57,19 @@ extension WaterTipsCard: ViewCode {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 100),
-            
-            imageView.widthAnchor.constraint(equalToConstant: 46),
-            imageView.heightAnchor.constraint(equalToConstant: 46),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
-            imageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            
-            textLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 24),
-            textLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            textLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
-        ])
+        self.snp.makeConstraints { make in
+            make.height.equalTo(100)
+        }
+        
+        imageView.snp.makeConstraints { make in
+            make.size.equalTo(46)
+            make.leading.equalToSuperview().offset(24)
+            make.centerY.equalToSuperview()
+        }
+        
+        textLabel.snp.makeConstraints { make in
+            make.leading.equalTo(imageView.snp.trailing).offset(24)
+            make.center.equalToSuperview()
+        }
     }
 }

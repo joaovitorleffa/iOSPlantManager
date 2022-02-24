@@ -62,7 +62,6 @@
 		2BAFEE1627BE7FCA001473C2 /* MyPlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE1527BE7FCA001473C2 /* MyPlantsView.swift */; };
 		2BAFEE1827BE8B87001473C2 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE1727BE8B87001473C2 /* UserInfoView.swift */; };
 		2BAFEE1A27BE8C33001473C2 /* NSAttributedString+Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE1927BE8C33001473C2 /* NSAttributedString+Title.swift */; };
-		2BAFEE1D27BE8F9D001473C2 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 2BAFEE1C27BE8F9D001473C2 /* Nuke */; };
 		2BAFEE1F27BE8FB1001473C2 /* UIImageView+loadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE1E27BE8FB1001473C2 /* UIImageView+loadImage.swift */; };
 		2BAFEE2127BEA986001473C2 /* GreetingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE2027BEA986001473C2 /* GreetingPresenter.swift */; };
 		2BAFEE2327BEAB4A001473C2 /* GreetingPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFEE2227BEAB4A001473C2 /* GreetingPresenterTests.swift */; };
@@ -94,6 +93,9 @@
 		2BE0E2F227BD958200B08269 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2F127BD958200B08269 /* CoreDataManager.swift */; };
 		2BE0E2F627BD9A9600B08269 /* UserIdentificationPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2F527BD9A9600B08269 /* UserIdentificationPresenterTests.swift */; };
 		2BE0E2F927BD9C0000B08269 /* UserIdentificationViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2F827BD9C0000B08269 /* UserIdentificationViewMock.swift */; };
+		785D1D8BD3AB916F89DFBEAF /* Pods_iOSPlantManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB610FA9CABFD01B35035A84 /* Pods_iOSPlantManager.framework */; };
+		B37B058B29CA09B356C82614 /* Pods_iOSPlantManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47AB1208DFEFC9DB89E5C68B /* Pods_iOSPlantManagerTests.framework */; };
+		D82CDCEEB89F11F940D28090 /* Pods_iOSPlantManager_iOSPlantManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6B9AECBB7776D3F3BB2756 /* Pods_iOSPlantManager_iOSPlantManagerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F6B9AECBB7776D3F3BB2756 /* Pods_iOSPlantManager_iOSPlantManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPlantManager_iOSPlantManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B09A31127BC350900C61B1E /* iOSPlantManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSPlantManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B09A31427BC350900C61B1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B09A31D27BC350B00C61B1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -204,6 +207,14 @@
 		2BE0E2F327BD970000B08269 /* CoreDataTestStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTestStack.swift; sourceTree = "<group>"; };
 		2BE0E2F527BD9A9600B08269 /* UserIdentificationPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationPresenterTests.swift; sourceTree = "<group>"; };
 		2BE0E2F827BD9C0000B08269 /* UserIdentificationViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationViewMock.swift; sourceTree = "<group>"; };
+		47AB1208DFEFC9DB89E5C68B /* Pods_iOSPlantManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPlantManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EF5D43D94C13CA227306C42 /* Pods-iOSPlantManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPlantManager.release.xcconfig"; path = "Target Support Files/Pods-iOSPlantManager/Pods-iOSPlantManager.release.xcconfig"; sourceTree = "<group>"; };
+		5837CE23B28565AED55C887F /* Pods-iOSPlantManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPlantManager.debug.xcconfig"; path = "Target Support Files/Pods-iOSPlantManager/Pods-iOSPlantManager.debug.xcconfig"; sourceTree = "<group>"; };
+		58E3E01F512BAE2FDDCD36EB /* Pods-iOSPlantManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPlantManagerTests.debug.xcconfig"; path = "Target Support Files/Pods-iOSPlantManagerTests/Pods-iOSPlantManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B82DD3BE5F1D071AD7CA9B05 /* Pods-iOSPlantManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPlantManagerTests.release.xcconfig"; path = "Target Support Files/Pods-iOSPlantManagerTests/Pods-iOSPlantManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB610FA9CABFD01B35035A84 /* Pods_iOSPlantManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPlantManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D004F37655486F8DB87DB45D /* Pods-iOSPlantManager-iOSPlantManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPlantManager-iOSPlantManagerUITests.debug.xcconfig"; path = "Target Support Files/Pods-iOSPlantManager-iOSPlantManagerUITests/Pods-iOSPlantManager-iOSPlantManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED7898D373E9D0BAE1E8382D /* Pods-iOSPlantManager-iOSPlantManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPlantManager-iOSPlantManagerUITests.release.xcconfig"; path = "Target Support Files/Pods-iOSPlantManager-iOSPlantManagerUITests/Pods-iOSPlantManager-iOSPlantManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,7 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BAFEE1D27BE8F9D001473C2 /* Nuke in Frameworks */,
+				785D1D8BD3AB916F89DFBEAF /* Pods_iOSPlantManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +230,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37B058B29CA09B356C82614 /* Pods_iOSPlantManagerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +238,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D82CDCEEB89F11F940D28090 /* Pods_iOSPlantManager_iOSPlantManagerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +252,8 @@
 				2B09A32A27BC350C00C61B1E /* iOSPlantManagerTests */,
 				2B09A33427BC350C00C61B1E /* iOSPlantManagerUITests */,
 				2B09A31227BC350900C61B1E /* Products */,
+				DACB11876DF71E3B473EB2E2 /* Pods */,
+				94431E2CE7CAD09483AD86DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -520,6 +535,29 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		94431E2CE7CAD09483AD86DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB610FA9CABFD01B35035A84 /* Pods_iOSPlantManager.framework */,
+				1F6B9AECBB7776D3F3BB2756 /* Pods_iOSPlantManager_iOSPlantManagerUITests.framework */,
+				47AB1208DFEFC9DB89E5C68B /* Pods_iOSPlantManagerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DACB11876DF71E3B473EB2E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5837CE23B28565AED55C887F /* Pods-iOSPlantManager.debug.xcconfig */,
+				4EF5D43D94C13CA227306C42 /* Pods-iOSPlantManager.release.xcconfig */,
+				D004F37655486F8DB87DB45D /* Pods-iOSPlantManager-iOSPlantManagerUITests.debug.xcconfig */,
+				ED7898D373E9D0BAE1E8382D /* Pods-iOSPlantManager-iOSPlantManagerUITests.release.xcconfig */,
+				58E3E01F512BAE2FDDCD36EB /* Pods-iOSPlantManagerTests.debug.xcconfig */,
+				B82DD3BE5F1D071AD7CA9B05 /* Pods-iOSPlantManagerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -527,9 +565,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B09A33B27BC350C00C61B1E /* Build configuration list for PBXNativeTarget "iOSPlantManager" */;
 			buildPhases = (
+				26B9C4B2D95C39826B6511FE /* [CP] Check Pods Manifest.lock */,
 				2B09A30D27BC350900C61B1E /* Sources */,
 				2B09A30E27BC350900C61B1E /* Frameworks */,
 				2B09A30F27BC350900C61B1E /* Resources */,
+				B52D225E28F5177D0DE51AB2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -537,7 +577,6 @@
 			);
 			name = iOSPlantManager;
 			packageProductDependencies = (
-				2BAFEE1C27BE8F9D001473C2 /* Nuke */,
 			);
 			productName = iOSPlantManager;
 			productReference = 2B09A31127BC350900C61B1E /* iOSPlantManager.app */;
@@ -547,6 +586,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B09A33E27BC350C00C61B1E /* Build configuration list for PBXNativeTarget "iOSPlantManagerTests" */;
 			buildPhases = (
+				D132F5F44EC2EE63117490C1 /* [CP] Check Pods Manifest.lock */,
 				2B09A32327BC350C00C61B1E /* Sources */,
 				2B09A32427BC350C00C61B1E /* Frameworks */,
 				2B09A32527BC350C00C61B1E /* Resources */,
@@ -565,9 +605,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B09A34127BC350C00C61B1E /* Build configuration list for PBXNativeTarget "iOSPlantManagerUITests" */;
 			buildPhases = (
+				23C3DADD84AE88B835FE32EB /* [CP] Check Pods Manifest.lock */,
 				2B09A32D27BC350C00C61B1E /* Sources */,
 				2B09A32E27BC350C00C61B1E /* Frameworks */,
 				2B09A32F27BC350C00C61B1E /* Resources */,
+				2760CCC78F193C61EB1F2870 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -612,7 +654,6 @@
 			);
 			mainGroup = 2B09A30827BC350900C61B1E;
 			packageReferences = (
-				2BAFEE1B27BE8F9D001473C2 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = 2B09A31227BC350900C61B1E /* Products */;
 			projectDirPath = "";
@@ -668,6 +709,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23C3DADD84AE88B835FE32EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSPlantManager-iOSPlantManagerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26B9C4B2D95C39826B6511FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSPlantManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2760CCC78F193C61EB1F2870 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSPlantManager-iOSPlantManagerUITests/Pods-iOSPlantManager-iOSPlantManagerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSPlantManager-iOSPlantManagerUITests/Pods-iOSPlantManager-iOSPlantManagerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSPlantManager-iOSPlantManagerUITests/Pods-iOSPlantManager-iOSPlantManagerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B52D225E28F5177D0DE51AB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSPlantManager/Pods-iOSPlantManager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSPlantManager/Pods-iOSPlantManager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSPlantManager/Pods-iOSPlantManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D132F5F44EC2EE63117490C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSPlantManagerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2B09A30D27BC350900C61B1E /* Sources */ = {
@@ -902,6 +1046,7 @@
 		};
 		2B09A33C27BC350C00C61B1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5837CE23B28565AED55C887F /* Pods-iOSPlantManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -929,6 +1074,7 @@
 		};
 		2B09A33D27BC350C00C61B1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EF5D43D94C13CA227306C42 /* Pods-iOSPlantManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -956,6 +1102,7 @@
 		};
 		2B09A33F27BC350C00C61B1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58E3E01F512BAE2FDDCD36EB /* Pods-iOSPlantManagerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -976,6 +1123,7 @@
 		};
 		2B09A34027BC350C00C61B1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B82DD3BE5F1D071AD7CA9B05 /* Pods-iOSPlantManagerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -996,6 +1144,7 @@
 		};
 		2B09A34227BC350C00C61B1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D004F37655486F8DB87DB45D /* Pods-iOSPlantManager-iOSPlantManagerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1014,6 +1163,7 @@
 		};
 		2B09A34327BC350C00C61B1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED7898D373E9D0BAE1E8382D /* Pods-iOSPlantManager-iOSPlantManagerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1070,25 +1220,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		2BAFEE1B27BE8F9D001473C2 /* XCRemoteSwiftPackageReference "Nuke" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kean/Nuke";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2BAFEE1C27BE8F9D001473C2 /* Nuke */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2BAFEE1B27BE8F9D001473C2 /* XCRemoteSwiftPackageReference "Nuke" */;
-			productName = Nuke;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2BE0E2C127BD70B900B08269 /* iOSPlantManager.xcdatamodeld */ = {

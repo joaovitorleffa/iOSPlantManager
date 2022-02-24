@@ -6,16 +6,15 @@
 //
 
 import UIKit
+import SnapKit
 
 class MyPlantsView: UIView {
     let userInfoView: UserInfoView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.configure(with: .init(titlePrefix: "Minhas", title: "Plantinhas", imageUrl: ""))
         return $0
     }(UserInfoView())
     
     let tableView: UITableView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.bounces = false
         $0.showsVerticalScrollIndicator = false
         $0.backgroundColor = .background
@@ -40,16 +39,16 @@ extension MyPlantsView: ViewCode {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            userInfoView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 32),
-            userInfoView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-            userInfoView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            userInfoView.heightAnchor.constraint(equalToConstant: 60),
-            
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            tableView.topAnchor.constraint(equalTo: userInfoView.bottomAnchor),
-            tableView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
-        ])
+        userInfoView.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide).offset(32)
+            make.leading.equalToSuperview().offset(32)
+            make.centerX.equalToSuperview()
+            make.height.equalTo(60)
+        }
+        tableView.snp.makeConstraints { make in
+            make.leading.centerX.equalToSuperview()
+            make.top.equalTo(userInfoView.snp.bottom)
+            make.bottom.equalTo(safeAreaLayoutGuide)
+        }
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 struct TextFieldPrimaryViewModel {
     let placeholder: String
@@ -45,8 +46,8 @@ extension TextFieldPrimaryView {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: height)
-        ])
+        self.snp.makeConstraints { make in
+            make.height.equalTo(height)
+        }
     }
 }

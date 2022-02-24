@@ -6,10 +6,10 @@
 //
 
 import UIKit
+import SnapKit
 
 class MyPlantsSectionHeader: UIView {
     let titleLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.font = .titleLarge
         $0.textColor = .heading
         return $0
@@ -40,10 +40,9 @@ extension MyPlantsSectionHeader: ViewCode {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
-            titleLabel.topAnchor.constraint(equalTo: topAnchor),
-            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
-        ])
+        titleLabel.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(32)
+            make.top.centerY.equalToSuperview()
+        }
     }
 }

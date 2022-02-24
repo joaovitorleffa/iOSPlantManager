@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 struct UserInfoViewModel {
     let titlePrefix: String
@@ -17,7 +18,6 @@ class UserInfoView: UIView {
     private let imageSize: CGFloat = 56
     
     let containerStackView: UIStackView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .horizontal
         $0.alignment = .center
         $0.distribution = .equalSpacing
@@ -32,7 +32,6 @@ class UserInfoView: UIView {
     }(UILabel())
     
     lazy var imageView: UIImageView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.layer.cornerRadius = self.imageSize / 2
         $0.layer.masksToBounds = true
         $0.backgroundColor = .systemGray6
@@ -70,13 +69,12 @@ extension UserInfoView: ViewCode {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            containerStackView.topAnchor.constraint(equalTo: topAnchor),
-            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containerStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            
-            imageView.heightAnchor.constraint(equalToConstant: imageSize),
-            imageView.widthAnchor.constraint(equalToConstant: imageSize)
-        ])
+        containerStackView.snp.makeConstraints { make in
+            make.top.leading.centerX.equalToSuperview()
+        }
+        
+        imageView.snp.makeConstraints { make in
+            make.size.equalTo(imageSize)
+        }
     }
 }

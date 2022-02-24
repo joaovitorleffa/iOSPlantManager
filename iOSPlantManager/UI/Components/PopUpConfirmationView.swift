@@ -6,10 +6,10 @@
 //
 
 import UIKit
+import SnapKit
 
 class PopUpConfirmationView: UIView {
     let container: UIView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.backgroundColor = .background
         $0.layer.cornerRadius = 20
         $0.layer.masksToBounds = true
@@ -17,14 +17,12 @@ class PopUpConfirmationView: UIView {
     }(UIView())
     
     let stack: UIStackView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .vertical
         $0.alignment = .center
         return $0
     }(UIStackView())
     
     let imageWrapperView: UIView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.layer.cornerRadius = 20
         $0.layer.masksToBounds = true
         $0.backgroundColor = .shape
@@ -32,13 +30,11 @@ class PopUpConfirmationView: UIView {
     }(UIView())
 
     let imageView: UIImageView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.contentMode = .center
         return $0
     }(UIImageView())
     
     let messageLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.textColor = .heading
         $0.font = .headingLarge
         $0.numberOfLines = 2
@@ -48,7 +44,6 @@ class PopUpConfirmationView: UIView {
     }(UILabel())
     
     let footerStack: UIStackView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .horizontal
         $0.spacing = 10
         $0.distribution = .fillEqually
@@ -56,13 +51,11 @@ class PopUpConfirmationView: UIView {
     }(UIStackView())
     
     let cancelBtn: ButtonSecondary = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.configure(with: .init(text: "Cancelar", variant: .normal))
         return $0
     }(ButtonSecondary())
     
     let deleteBtn: ButtonSecondary = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
         $0.configure(with: .init(text: "Deletar", variant: .danger))
         return $0
     }(ButtonSecondary())
@@ -91,27 +84,32 @@ extension PopUpConfirmationView: ViewCode {
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            container.centerYAnchor.constraint(equalTo: centerYAnchor),
-            container.centerXAnchor.constraint(equalTo: centerXAnchor),
-            container.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.7),
-            container.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.45),
-            
-            stack.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 32),
-            stack.topAnchor.constraint(equalTo: container.topAnchor, constant: 32),
-            stack.centerXAnchor.constraint(equalTo: container.centerXAnchor),
-            stack.centerYAnchor.constraint(equalTo: container.centerYAnchor),
-            
-            imageWrapperView.heightAnchor.constraint(equalToConstant: 120),
-            imageWrapperView.widthAnchor.constraint(equalToConstant: 120),
-            imageView.leadingAnchor.constraint(equalTo: imageWrapperView.leadingAnchor),
-            imageView.topAnchor.constraint(equalTo: imageWrapperView.topAnchor),
-            imageView.centerXAnchor.constraint(equalTo: imageWrapperView.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: imageWrapperView.centerYAnchor),
-            
-            cancelBtn.widthAnchor.constraint(equalToConstant: 96),
-            deleteBtn.widthAnchor.constraint(equalToConstant: 96)
-        ])
+        container.snp.makeConstraints { make in
+            make.centerY.centerX.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.7)
+            make.height.equalToSuperview().multipliedBy(0.45)
+        }
+        
+        stack.snp.makeConstraints { make in
+            make.leading.top.equalTo(container).offset(32)
+            make.center.equalToSuperview()
+        }
+        
+        imageWrapperView.snp.makeConstraints { make in
+            make.size.equalTo(120)
+        }
+        
+        imageView.snp.makeConstraints { make in
+            make.centerY.centerX.leading.top.equalTo(imageWrapperView)
+        }
+        
+        cancelBtn.snp.makeConstraints { make in
+            make.width.equalTo(96)
+        }
+        
+        deleteBtn.snp.makeConstraints { make in
+            make.width.equalTo(96)
+        }
     }
 }
 
