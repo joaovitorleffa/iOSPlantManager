@@ -18,7 +18,11 @@ class MyPlantsPresenter {
     private let plantManager: MyPlantManagerProtocol
     private weak var view: MyPlantsViewProtocol?
     
-    var plants: [MyPlant] = []
+    var plants: [MyPlant] = [] {
+        didSet {
+            view?.reloadTable()
+        }
+    }
     
     init(view: MyPlantsViewProtocol, plantManager: MyPlantManagerProtocol = MyPlantManager()) {
         self.view = view
@@ -30,7 +34,6 @@ extension MyPlantsPresenter: MyPlantsPresenterProtocol {
     func loadData() {
         if let myPlants = plantManager.fetchMyPlants() {
             plants = myPlants.sorted { $0.dateTimeNotification!.compare($1.dateTimeNotification!) == .orderedAscending }
-            view?.reloadTable()
         }
     }
     

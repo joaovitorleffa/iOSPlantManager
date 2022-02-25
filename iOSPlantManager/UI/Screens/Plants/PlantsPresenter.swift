@@ -22,9 +22,13 @@ class PlantsPrensenter {
     private let API: APIProtocol
     
     var plants: [Plant] = []
-    var filteredPlants: [Plant] = []
     var environments: [PlantEnvironment] = []
     lazy var selectedEnvironment: PlantEnvironment? = environments.first
+    var filteredPlants: [Plant] = [] {
+        didSet {
+            view?.reloadData()
+        }
+    }
     
     init(view: PlantsViewProtocol, API: APIProtocol = Requester(), userManager: UserManagerProtocol = UserManager()) {
         self.userManager = userManager
@@ -46,7 +50,6 @@ extension PlantsPrensenter {
             case .success(let data):
                 self?.environments = data
                 self?.filteredPlants = self?.filterPlants() ?? []
-                self?.view?.reloadData()
             case .failure(let error):
                 print(error)
             }
