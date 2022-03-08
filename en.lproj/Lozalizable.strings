@@ -1,0 +1,32 @@
+/* 
+  Lozalizable.strings
+  iOSPlantManager
+
+  Created by joaovitor on 08/03/22.
+  
+*/
+
+"GreetingView.title" = "Gerencie suas plantas de forma fácil";
+"GreetingView.description" = "Não esqueça mais de regar suas plantas. Nós cuidamos de lembrar você sempre que precisar.";
+
+"UserIdentificationView.title" = "Como podemos chamar você?";
+"UserIdentificationView.confirmationTitle" = "Prontinho";
+"UserIdentificationView.confirmationMessage" = "Agora vamos começar a cuidar das suas plantinhas com muito cuidado.";
+"UserIdentificationView.confirmationButton" = "Começar";
+
+"MyPlantsView.titlePrefix" = "Minhas";
+"MyPlantsview.title" = "Plantinhas";
+
+"PlantsView.sectionHeaderTitle" = "Em qual ambiente";
+"PlantsView.sectionHeaderSubtitle" = "você quer colocar a sua planta";
+"PlantsView.title" = "Olá"
+
+"AddPlantView.timerTitle" = "Escolha o melhor horário para ser lembrado:";
+"AddPlantView.registerPlant" = "Cadastrar Planta";
+"AddPlantView.confirmationTitle" = "Tudo certo";
+"AddPlantView.confirmationMessage" = "Fique tranquilo que sempre vamos lembrar você de cuidar da sua platinha com bastante amor.";
+"AddPlantView.confirmationButton" = "Entendi";
+
+"UITextField.placeholderName" = "Digite o seu nome";
+
+"UIButton.titleConfirm" = "Confirmar";

@@ -41,6 +41,7 @@
 		2B266FEB1C6CEC0C004C7FC8 /* NSAttributedString+Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B266FEA1C6CEC0C004C7FC8 /* NSAttributedString+Weight.swift */; };
 		2B266FED1C6CF64C004C7FC8 /* MyPlantsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B266FEC1C6CF64C004C7FC8 /* MyPlantsPresenter.swift */; };
 		2B266FEF1C6CFCA5004C7FC8 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B266FEE1C6CFCA5004C7FC8 /* Date+Format.swift */; };
+		2B3292B527D7EFAE00E29109 /* Lozalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B3292B727D7EFAE00E29109 /* Lozalizable.strings */; };
 		2B456F7127C7F5A900E6AC6F /* GreetingPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B456F7027C7F5A900E6AC6F /* GreetingPresenterMock.swift */; };
 		2B456F7327C7F85900E6AC6F /* GreetingViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B456F7227C7F85900E6AC6F /* GreetingViewMock.swift */; };
 		2B456F7527C7FA7400E6AC6F /* GreetingViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B456F7427C7FA7400E6AC6F /* GreetingViewControllerTests.swift */; };
@@ -99,6 +100,8 @@
 		2BE0E2F227BD958200B08269 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2F127BD958200B08269 /* CoreDataManager.swift */; };
 		2BE0E2F627BD9A9600B08269 /* UserIdentificationPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2F527BD9A9600B08269 /* UserIdentificationPresenterTests.swift */; };
 		2BE0E2F927BD9C0000B08269 /* UserIdentificationViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0E2F827BD9C0000B08269 /* UserIdentificationViewMock.swift */; };
+		2BFDBA8927D7F5C700530907 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFDBA8827D7F5C700530907 /* R.generated.swift */; };
+		2BFDBA8B27D7F5F600530907 /* RAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFDBA8A27D7F5F600530907 /* RAlias.swift */; };
 		785D1D8BD3AB916F89DFBEAF /* Pods_iOSPlantManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB610FA9CABFD01B35035A84 /* Pods_iOSPlantManager.framework */; };
 		B37B058B29CA09B356C82614 /* Pods_iOSPlantManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47AB1208DFEFC9DB89E5C68B /* Pods_iOSPlantManagerTests.framework */; };
 		D82CDCEEB89F11F940D28090 /* Pods_iOSPlantManager_iOSPlantManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6B9AECBB7776D3F3BB2756 /* Pods_iOSPlantManager_iOSPlantManagerUITests.framework */; };
@@ -161,6 +164,8 @@
 		2B266FEA1C6CEC0C004C7FC8 /* NSAttributedString+Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Weight.swift"; sourceTree = "<group>"; };
 		2B266FEC1C6CF64C004C7FC8 /* MyPlantsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsPresenter.swift; sourceTree = "<group>"; };
 		2B266FEE1C6CFCA5004C7FC8 /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
+		2B3292B627D7EFAE00E29109 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Lozalizable.strings; sourceTree = "<group>"; };
+		2B3292B827D7EFC500E29109 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Lozalizable.strings"; sourceTree = "<group>"; };
 		2B456F7027C7F5A900E6AC6F /* GreetingPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingPresenterMock.swift; sourceTree = "<group>"; };
 		2B456F7227C7F85900E6AC6F /* GreetingViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewMock.swift; sourceTree = "<group>"; };
 		2B456F7427C7FA7400E6AC6F /* GreetingViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewControllerTests.swift; sourceTree = "<group>"; };
@@ -219,6 +224,8 @@
 		2BE0E2F327BD970000B08269 /* CoreDataTestStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTestStack.swift; sourceTree = "<group>"; };
 		2BE0E2F527BD9A9600B08269 /* UserIdentificationPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationPresenterTests.swift; sourceTree = "<group>"; };
 		2BE0E2F827BD9C0000B08269 /* UserIdentificationViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentificationViewMock.swift; sourceTree = "<group>"; };
+		2BFDBA8827D7F5C700530907 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		2BFDBA8A27D7F5F600530907 /* RAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAlias.swift; sourceTree = "<group>"; };
 		47AB1208DFEFC9DB89E5C68B /* Pods_iOSPlantManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPlantManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF5D43D94C13CA227306C42 /* Pods-iOSPlantManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPlantManager.release.xcconfig"; path = "Target Support Files/Pods-iOSPlantManager/Pods-iOSPlantManager.release.xcconfig"; sourceTree = "<group>"; };
 		5837CE23B28565AED55C887F /* Pods-iOSPlantManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPlantManager.debug.xcconfig"; path = "Target Support Files/Pods-iOSPlantManager/Pods-iOSPlantManager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -260,6 +267,7 @@
 		2B09A30827BC350900C61B1E = {
 			isa = PBXGroup;
 			children = (
+				2B3292B727D7EFAE00E29109 /* Lozalizable.strings */,
 				2B09A31327BC350900C61B1E /* iOSPlantManager */,
 				2B09A32A27BC350C00C61B1E /* iOSPlantManagerTests */,
 				2B09A33427BC350C00C61B1E /* iOSPlantManagerUITests */,
@@ -326,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				2B09A34527BC366200C61B1E /* ViewCode.swift */,
+				2BFDBA8A27D7F5F600530907 /* RAlias.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -398,6 +407,7 @@
 		2B09A35627BC424E00C61B1E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2BFDBA8827D7F5C700530907 /* R.generated.swift */,
 				2B09A35727BC425400C61B1E /* Fonts */,
 			);
 			path = Resources;
@@ -584,6 +594,7 @@
 			buildConfigurationList = 2B09A33B27BC350C00C61B1E /* Build configuration list for PBXNativeTarget "iOSPlantManager" */;
 			buildPhases = (
 				26B9C4B2D95C39826B6511FE /* [CP] Check Pods Manifest.lock */,
+				2BD37DB727D7E79D00E787B5 /* ShellScript */,
 				2B09A30D27BC350900C61B1E /* Sources */,
 				2B09A30E27BC350900C61B1E /* Frameworks */,
 				2B09A30F27BC350900C61B1E /* Resources */,
@@ -669,6 +680,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 2B09A30827BC350900C61B1E;
 			packageReferences = (
@@ -708,6 +720,7 @@
 				2B09A37927BC444100C61B1E /* Jost-ExtraBold.ttf in Resources */,
 				2B09A36D27BC444100C61B1E /* Jost-ThinItalic.ttf in Resources */,
 				2B09A31E27BC350B00C61B1E /* Assets.xcassets in Resources */,
+				2B3292B527D7EFAE00E29109 /* Lozalizable.strings in Resources */,
 				2B09A37127BC444100C61B1E /* Jost-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -790,6 +803,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSPlantManager-iOSPlantManagerUITests/Pods-iOSPlantManager-iOSPlantManagerUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2BD37DB727D7E79D00E787B5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		B52D225E28F5177D0DE51AB2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -868,10 +900,12 @@
 				2B52346027BEDCEF008F666F /* MyPlantTableViewCell.swift in Sources */,
 				2BAFEE3027BEEBAE001473C2 /* PlantCollectionViewCell.swift in Sources */,
 				2BE0E2C027BD486800B08269 /* UserIdentificationPresenter.swift in Sources */,
+				2BFDBA8927D7F5C700530907 /* R.generated.swift in Sources */,
 				2B09A34A27BC370900C61B1E /* BaseViewController.swift in Sources */,
 				2BAFEE1827BE8B87001473C2 /* UserInfoView.swift in Sources */,
 				2B52346227BEE9A2008F666F /* MyPlantsSectionHeader.swift in Sources */,
 				2BAFEE2A27BEC0D0001473C2 /* PlantEnvironmentCollectionViewCell.swift in Sources */,
+				2BFDBA8B27D7F5F600530907 /* RAlias.swift in Sources */,
 				2BAFEE1127BE7F64001473C2 /* TabBarViewController.swift in Sources */,
 				2B52345D27BECCB9008F666F /* MyPlant+CoreDataClass.swift in Sources */,
 				2B77B3E127BE7FE500800173 /* AddPlantViewController.swift in Sources */,
@@ -949,6 +983,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		2B3292B727D7EFAE00E29109 /* Lozalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B3292B627D7EFAE00E29109 /* en */,
+				2B3292B827D7EFC500E29109 /* pt-BR */,
+			);
+			name = Lozalizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -956,6 +999,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1017,6 +1061,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
