@@ -8,8 +8,12 @@
 import UIKit
 import SnapKit
 
-struct WaterTipsCardModel {
-    let text: String
+protocol WaterTipsCardDescriptorProtocol {
+    var text: String { get }
+}
+
+struct WaterTipsCardDescriptor: WaterTipsCardDescriptorProtocol {
+    var text: String
 }
 
 class WaterTipsCard: UIView {
@@ -44,7 +48,7 @@ class WaterTipsCard: UIView {
         layer.masksToBounds = true
     }
     
-    func configure(with model: WaterTipsCardModel) {
+    func configure(with model: WaterTipsCardDescriptorProtocol) {
         textLabel.text = model.text
     }
 }

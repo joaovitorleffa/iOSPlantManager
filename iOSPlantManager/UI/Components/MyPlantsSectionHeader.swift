@@ -8,6 +8,14 @@
 import UIKit
 import SnapKit
 
+protocol MyPlantsSectionHeaderDescriptorProtocol {
+    var title: String { get }
+}
+
+struct MyPlantsSectionHeaderDescriptor: MyPlantsSectionHeaderDescriptorProtocol {
+    var title: String
+}
+
 class MyPlantsSectionHeader: UIView {
     let titleLabel: UILabel = {
         $0.font = .titleLarge
@@ -25,8 +33,8 @@ class MyPlantsSectionHeader: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(title: String) {
-        titleLabel.text = title
+    func configure(with model: MyPlantsSectionHeaderDescriptorProtocol) {
+        titleLabel.text = model.title
     }
     
     func setup() {

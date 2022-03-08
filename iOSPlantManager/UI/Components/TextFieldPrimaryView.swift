@@ -8,8 +8,12 @@
 import UIKit
 import SnapKit
 
-struct TextFieldPrimaryViewModel {
-    let placeholder: String
+protocol TextFieldPrimaryViewDescriptorProtocol {
+    var placeholder: String { get }
+}
+
+struct TextFieldPrimaryViewDescriptor: TextFieldPrimaryViewDescriptorProtocol {
+    var placeholder: String
 }
 
 class TextFieldPrimaryView: UITextField {
@@ -41,7 +45,7 @@ extension TextFieldPrimaryView {
         setupConstraints()
     }
     
-    func configure(with model: TextFieldPrimaryViewModel) {
+    func configure(with model: TextFieldPrimaryViewDescriptorProtocol) {
         placeholder = model.placeholder
     }
     

@@ -95,7 +95,7 @@ extension PlantsPrensenter: PlantsPresenterProtocol {
         }
         
         if indexPath.section == 2 {
-            view?.navigate(with: plants[indexPath.row])
+            view?.navigate(with: filteredPlants[indexPath.row])
         }
     }
     

@@ -59,8 +59,9 @@ extension PlantsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == ElementKind.sectionHeader, indexPath.section == 1 {
             if let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeaderView.identifier, for: indexPath) as? SectionHeaderView {
-                headerView.configure(with: .init(text: NSMutableAttributedString.formatSectionHeaderTitle(prefix: "Em qual ambiente",
-                                                                                                          sufix: "você quer colocar a sua planta")))
+                headerView.configure(with: SectionHeaderDescriptor(text: NSMutableAttributedString.formatSectionHeaderTitle(prefix: "Em qual ambiente",
+                                                                                                          
+                                                                                                                            sufix: "você quer colocar a sua planta")))
                 return headerView
             }
             

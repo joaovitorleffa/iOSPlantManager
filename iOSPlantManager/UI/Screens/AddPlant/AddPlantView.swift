@@ -8,6 +8,20 @@
 import UIKit
 import SnapKit
 
+protocol AddPlantViewDescriptorProtocol {
+    var name: String { get }
+    var description: String { get }
+    var imageUrl: String { get }
+    var waterTips: String { get }
+}
+
+struct AddPlantViewDescriptor: AddPlantViewDescriptorProtocol {
+    var name: String
+    var description: String
+    var imageUrl: String
+    var waterTips: String
+}
+
 class AddPlantView: UIView {
     let containerStackView: UIStackView = {
         $0.axis = .vertical
@@ -72,7 +86,7 @@ class AddPlantView: UIView {
     }(UIDatePicker())
     
     let addButton: ButtonPrimary = {
-        $0.configure(with: .init(text: "Cadastrar Planta"))
+        $0.configure(with: ButtonPrimaryDescriptor(text: "Cadastrar Planta"))
         return $0
     }(ButtonPrimary())
     
@@ -86,11 +100,11 @@ class AddPlantView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(name: String, description: String, imageUrl: String, waterTips: String) {
-        titleLabel.text = name
-        descriptionLabel.text = description
-        imageView.loadImage(from: imageUrl)
-        waterTipsCard.configure(with: .init(text: waterTips))
+    func configure(with model: AddPlantViewDescriptorProtocol) {
+        titleLabel.text = model.name
+        descriptionLabel.text = model.description
+        imageView.loadImage(from: model.imageUrl)
+        waterTipsCard.configure(with: WaterTipsCardDescriptor(text: model.waterTips))
     }
 }
 

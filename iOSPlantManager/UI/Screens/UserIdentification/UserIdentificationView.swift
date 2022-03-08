@@ -38,7 +38,7 @@ class UserIdentificationView: ViewWithKeyboard {
     }(UILabel())
     
     let nameTextField: TextFieldPrimaryView = {
-        $0.configure(with: .init(placeholder: "Digite o seu nome"))
+        $0.configure(with: TextFieldPrimaryViewDescriptor(placeholder: "Digite o seu nome"))
         $0.returnKeyType = .send
         return $0
     }(TextFieldPrimaryView())
@@ -46,7 +46,7 @@ class UserIdentificationView: ViewWithKeyboard {
     let confirmButton: ButtonPrimary = {
         $0.isEnabled = false
         $0.layer.opacity = 0.6
-        $0.configure(with: .init(text: "Confirmar"))
+        $0.configure(with: ButtonPrimaryDescriptor(text: "Confirmar"))
         return $0
     }(ButtonPrimary())
     

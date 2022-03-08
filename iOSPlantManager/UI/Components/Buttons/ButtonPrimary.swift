@@ -7,8 +7,12 @@
 
 import UIKit
 
-struct ButtonPrimaryModel {
-    let text: String
+protocol ButtonPrimaryDescriptorProtocol {
+    var text: String { get }
+}
+
+struct ButtonPrimaryDescriptor: ButtonPrimaryDescriptorProtocol {
+    var text: String
 }
 
 class ButtonPrimary: UIButton {
@@ -22,7 +26,7 @@ class ButtonPrimary: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with model: ButtonPrimaryModel) {
+    func configure(with model: ButtonPrimaryDescriptorProtocol) {
         setTitle(model.text, for: .normal)
     }
     

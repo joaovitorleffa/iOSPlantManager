@@ -38,7 +38,10 @@ class AddPlantViewController: BaseViewController<AddPlantView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.tabBarController?.tabBar.isHidden = true
-        customView.configure(name: plant.name, description: plant.about, imageUrl: plant.photo, waterTips: plant.waterTips)
+        customView.configure(with: AddPlantViewDescriptor(name: plant.name,
+                                                          description: plant.about,
+                                                          imageUrl: plant.photo,
+                                                          waterTips: plant.waterTips))
     }
 
     @objc

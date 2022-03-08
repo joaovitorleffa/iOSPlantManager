@@ -23,6 +23,6 @@ class GreetingPresenter {
 
 extension GreetingPresenter: GreetingPresenterProtocol {
     func viewDidLoaded() {
-        if userManager.fetchUser() != nil { view?.navigateToTab()  }
+        if userManager.fetchUser() != nil { view?.navigateToTab() }
     }
 }

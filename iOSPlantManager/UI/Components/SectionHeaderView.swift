@@ -7,8 +7,12 @@
 
 import UIKit
 
-struct SectionHeaderModel {
-    let text: NSAttributedString
+protocol SectionHeaderDescriptorProtocol {
+    var text: NSAttributedString { get }
+}
+
+struct SectionHeaderDescriptor: SectionHeaderDescriptorProtocol {
+    var text: NSAttributedString
 }
 
 class SectionHeaderView: UICollectionReusableView {
@@ -31,7 +35,7 @@ class SectionHeaderView: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with model: SectionHeaderModel) {
+    func configure(with model: SectionHeaderDescriptorProtocol) {
         label.attributedText = model.text
     }
 }

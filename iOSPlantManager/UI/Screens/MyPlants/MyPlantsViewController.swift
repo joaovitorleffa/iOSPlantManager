@@ -51,7 +51,7 @@ extension MyPlantsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = MyPlantsSectionHeader()
-        header.configure(title: "Próximas regadas")
+        header.configure(with: MyPlantsSectionHeaderDescriptor(title: "Próximas regadas"))
         return header
     }
     

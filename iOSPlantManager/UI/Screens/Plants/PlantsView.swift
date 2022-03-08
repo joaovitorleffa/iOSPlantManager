@@ -33,7 +33,7 @@ extension PlantsView: ViewCode {
     
     func setupConstraints() {
         collectionView.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide).offset(32)
+            make.top.equalTo(safeAreaLayoutGuide)
             make.leading.centerX.centerY.equalToSuperview()
         }
     }

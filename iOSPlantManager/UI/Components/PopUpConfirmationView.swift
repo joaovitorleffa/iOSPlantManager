@@ -51,12 +51,12 @@ class PopUpConfirmationView: UIView {
     }(UIStackView())
     
     let cancelBtn: ButtonSecondary = {
-        $0.configure(with: .init(text: "Cancelar", variant: .normal))
+        $0.configure(with: ButtonSecondaryDescriptor(text: "Cancelar", variant: .normal))
         return $0
     }(ButtonSecondary())
     
     let deleteBtn: ButtonSecondary = {
-        $0.configure(with: .init(text: "Deletar", variant: .danger))
+        $0.configure(with: ButtonSecondaryDescriptor(text: "Deletar", variant: .danger))
         return $0
     }(ButtonSecondary())
     

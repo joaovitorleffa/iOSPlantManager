@@ -14,6 +14,18 @@ struct UserInfoViewModel {
     let imageUrl: String
 }
 
+protocol UserInfoViewDescriptorProtocol {
+    var titlePrefix: String { get }
+    var title: String { get }
+    var imageUrl: String { get }
+}
+
+struct UserInfoViewDescriptor: UserInfoViewDescriptorProtocol {
+    var titlePrefix: String
+    var title: String
+    var imageUrl: String
+}
+
 class UserInfoView: UIView {
     private let imageSize: CGFloat = 56
     
@@ -48,7 +60,7 @@ class UserInfoView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with model: UserInfoViewModel) {
+    func configure(with model: UserInfoViewDescriptorProtocol) {
         greetingLabel.attributedText = NSAttributedString(string: model.titlePrefix).appendSufix(model.title)
         
         if model.imageUrl.isEmpty {

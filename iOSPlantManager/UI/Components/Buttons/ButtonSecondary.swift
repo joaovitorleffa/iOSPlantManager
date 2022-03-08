@@ -7,13 +7,28 @@
 
 import UIKit
 
-struct ButtonSecondaryModel {
-    let text: String
-    let variant: Variant
+protocol ButtonSecondaryDescriptorProtocol {
+    var text: String { get }
+}
 
+struct ButtonSecondaryDescriptor: ButtonSecondaryDescriptorProtocol {
+    let text: String
+    var variant: Variant
+}
+
+extension ButtonSecondaryDescriptor {
     enum Variant {
         case normal
         case danger
+        
+        var color: UIColor? {
+            switch self {
+            case .normal:
+                return .heading
+            case .danger:
+                return .red
+            }
+        }
     }
 }
 
@@ -35,18 +50,9 @@ class ButtonSecondary: UIButton {
         titleLabel?.font = .heading
     }
     
-    func configure(with model: ButtonSecondaryModel) {
+    func configure(with model: ButtonSecondaryDescriptor) {
         setTitle(model.text, for: .normal)
-        setTitleColor(getColorBased(on: model.variant), for: .normal)
-    }
-    
-    private func getColorBased(on variant: ButtonSecondaryModel.Variant) -> UIColor? {
-        switch variant {
-        case .normal:
-            return UIColor.heading
-        case .danger:
-            return UIColor.red
-        }
+        setTitleColor(model.variant.color, for: .normal)
     }
 }
 

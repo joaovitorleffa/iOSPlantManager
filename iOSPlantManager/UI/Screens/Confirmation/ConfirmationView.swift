@@ -8,11 +8,19 @@
 import UIKit
 import SnapKit
 
-struct ConfirmationViewModel {
-    let emoji: String
-    let title: String
-    let message: String
-    let buttonText: String
+protocol ConfirmationViewDescriptorProtocol {
+    var emoji: String { get }
+    var title: String { get }
+    var message: String { get }
+    var buttonText: String { get }
+}
+
+
+struct ConfirmationViewModel: ConfirmationViewDescriptorProtocol {
+    var emoji: String
+    var title: String
+    var message: String
+    var buttonText: String
 }
 
 class ConfirmationView: UIView {
@@ -67,11 +75,11 @@ class ConfirmationView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(width model: ConfirmationViewModel) {
+    func configure(width model: ConfirmationViewDescriptorProtocol) {
         emojiLabel.text = model.emoji
         titleLabel.text = model.title
         descriptionLabel.text = model.message
-        startButton.configure(with: .init(text: model.buttonText))
+        startButton.configure(with: ButtonPrimaryDescriptor(text: model.buttonText))
     }
 }
 

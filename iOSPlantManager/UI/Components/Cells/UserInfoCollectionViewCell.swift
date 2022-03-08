@@ -24,7 +24,7 @@ class UserInfoCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with model: UserInfoViewModel) {
+    func configure(with model: UserInfoViewDescriptor) {
         userInfoView.configure(with: model)
     }
 }
