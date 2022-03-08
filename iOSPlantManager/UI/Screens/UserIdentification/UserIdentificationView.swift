@@ -33,12 +33,12 @@ class UserIdentificationView: ViewWithKeyboard {
         $0.textColor = .heading
         $0.textAlignment = .center
         $0.numberOfLines = 0
-        $0.text = "Como podemos chamar você?"
+        $0.text = strings.userIdentificationViewTitle()
         return $0
     }(UILabel())
     
     let nameTextField: TextFieldPrimaryView = {
-        $0.configure(with: TextFieldPrimaryViewDescriptor(placeholder: "Digite o seu nome"))
+        $0.configure(with: TextFieldPrimaryViewDescriptor(placeholder: strings.uiTextFieldPlaceholderName()))
         $0.returnKeyType = .send
         return $0
     }(TextFieldPrimaryView())
@@ -46,7 +46,7 @@ class UserIdentificationView: ViewWithKeyboard {
     let confirmButton: ButtonPrimary = {
         $0.isEnabled = false
         $0.layer.opacity = 0.6
-        $0.configure(with: ButtonPrimaryDescriptor(text: "Confirmar"))
+        $0.configure(with: ButtonPrimaryDescriptor(text: strings.uiButtonTitleConfirm()))
         return $0
     }(ButtonPrimary())
     

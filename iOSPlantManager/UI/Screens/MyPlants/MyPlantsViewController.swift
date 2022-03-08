@@ -51,16 +51,16 @@ extension MyPlantsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = MyPlantsSectionHeader()
-        header.configure(with: MyPlantsSectionHeaderDescriptor(title: "Próximas regadas"))
+        header.configure(with: MyPlantsSectionHeaderDescriptor(title: strings.myPlantsViewSubtitle()))
         return header
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let action = UIContextualAction(style: .destructive, title: "Remover") { action, view, completion in
+        let action = UIContextualAction(style: .destructive, title: strings.myPlantsViewDelete()) { action, view, completion in
             let plant = self.presenter.plantModel(indexPath: indexPath)
             let popUp = PopUpConfirmationViewController(
                 imageUrl: plant.photo ?? "",
-                message: NSAttributedString.formatDeleteMessage(message: "Deseja mesmo deletar sua ", plantName: plant.name ?? ""),
+                message: NSAttributedString.formatDeleteMessage(message: strings.myPlantsViewDeleteMessage(), plantName: plant.name ?? ""),
                 id: Int(plant.id)
             )
             popUp.delegate = self

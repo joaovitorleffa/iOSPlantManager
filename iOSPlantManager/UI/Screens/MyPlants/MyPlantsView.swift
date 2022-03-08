@@ -10,7 +10,7 @@ import SnapKit
 
 class MyPlantsView: UIView {
     let userInfoView: UserInfoView = {
-        $0.configure(with: UserInfoViewDescriptor(titlePrefix: "Minhas", title: "Plantinhas", imageUrl: ""))
+        $0.configure(with: UserInfoViewDescriptor(titlePrefix: strings.myPlantsViewTitlePrefix(), title: strings.myPlantsViewTitle(), imageUrl: ""))
         return $0
     }(UserInfoView())
     

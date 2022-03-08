@@ -74,7 +74,7 @@ class AddPlantView: UIView {
         $0.font = .headingSmall
         $0.textColor = .body
         $0.textAlignment = .center
-        $0.text = "Escolha o melhor horário para ser lembrado:"
+        $0.text = strings.addPlantViewTimerTitle()
         return $0
     }(UILabel())
     
@@ -86,7 +86,7 @@ class AddPlantView: UIView {
     }(UIDatePicker())
     
     let addButton: ButtonPrimary = {
-        $0.configure(with: ButtonPrimaryDescriptor(text: "Cadastrar Planta"))
+        $0.configure(with: ButtonPrimaryDescriptor(text: strings.addPlantViewRegisterPlant()))
         return $0
     }(ButtonPrimary())
     

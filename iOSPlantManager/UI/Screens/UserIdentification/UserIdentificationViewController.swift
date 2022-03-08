@@ -50,9 +50,9 @@ extension UserIdentificationViewController: UserIdentificationViewProtocol {
     
     func navigateToConfimation() {
         let vcModel = ConfirmationViewModel(emoji: "😁",
-                                            title: "Prontinho",
-                                            message: "Agora vamos começar a cuidar das suas plantinhas com muito cuidado.",
-                                            buttonText: "Começar")
+                                            title: strings.userIdentificationViewConfirmationTitle(),
+                                            message: strings.userIdentificationViewConfirmationMessage(),
+                                            buttonText: strings.userIdentificationViewConfirmationButton())
         let vc = ConfirmationViewController(vcModel)
         vc.delegate = self
         

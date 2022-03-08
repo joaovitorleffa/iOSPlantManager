@@ -21,7 +21,7 @@ class GreetingView: UIView {
         $0.textColor = .heading
         $0.numberOfLines = 0
         $0.textAlignment = .center
-        $0.text = "Gerencie suas plantas de forma fácil"
+        $0.text = R.string.lozalizable.greetingViewTitle()
         return $0
     }(UILabel())
     

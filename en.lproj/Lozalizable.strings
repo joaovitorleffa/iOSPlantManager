@@ -15,11 +15,14 @@
 "UserIdentificationView.confirmationButton" = "Começar";
 
 "MyPlantsView.titlePrefix" = "Minhas";
-"MyPlantsview.title" = "Plantinhas";
+"MyPlantsView.title" = "Plantinhas";
+"MyPlantsView.subtitle" = "Próximas regadas";
+"MyPlantsView.deleteMessage" = "Deseja mesmo deletar sua ";
+"MyPlantsView.delete" = "Remover";
 
 "PlantsView.sectionHeaderTitle" = "Em qual ambiente";
 "PlantsView.sectionHeaderSubtitle" = "você quer colocar a sua planta";
-"PlantsView.title" = "Olá"
+"PlantsView.title" = "Olá";
 
 "AddPlantView.timerTitle" = "Escolha o melhor horário para ser lembrado:";
 "AddPlantView.registerPlant" = "Cadastrar Planta";

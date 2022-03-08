@@ -63,9 +63,10 @@ class AddPlantViewController: BaseViewController<AddPlantView> {
 extension AddPlantViewController: AddPlantViewProtocol {
     func saved() {
         let vcModel = ConfirmationViewModel(
-                            emoji: "🤗", title: "Tudo certo",
-                            message: "Fique tranquilo que sempre vamos lembrar você de cuidar da sua platinha com bastante amor.",
-                            buttonText: "Entendi")
+                            emoji: "🤗",
+                            title: strings.addPlantViewConfirmationTitle(),
+                            message: strings.addPlantViewConfirmationMessage(),
+                            buttonText: strings.addPlantViewConfirmationButton())
         let vc = ConfirmationViewController(vcModel)
         vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
